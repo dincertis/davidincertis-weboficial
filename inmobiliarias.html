@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas para Inmobiliarias y Relocation | David Incertis</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/inmobiliarias.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <img src="Imagenes/David_Incertis_Logo.png" alt="David Incertis Logo" class="logo-img">
+                    <span class="logo-subtitle">INGENIERO DE AUTOMATIZACIONES DIGITALES</span>
+                </a>
+            </div>
+            <nav class="nav header-nav" style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+                <!-- Desktop Menu -->
+                <div class="desktop-menu" style="display: flex; align-items: center;">
+                    <a href="index.html#services" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">SERVICIOS</a>
+                    <a href="index.html#clientes" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">CASOS DE ÉXITO</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">SOLUCIONES<br>POR SECTOR</button>
+                        <div class="dropdown-content">
+                            <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
+                            <a href="inmobiliarias.html">Inmobiliarias & Relocation</a>
+                        </div>
+                    </div>
+                    <a href="index.html" class="home-link" style="color: white !important; margin-right: 20px; font-weight: 700; font-size: 0.85rem;">Volver a Inicio</a>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu dropdown" style="display: none; margin-right: 15px;">
+                    <button class="dropbtn" style="font-size: 1rem; display: flex; align-items: center; gap: 5px;">MENÚ <span style="font-size: 0.7em;">▼</span></button>
+                    <div class="dropdown-content" style="min-width: 200px;">
+                        <a href="index.html#services">Servicios</a>
+                        <a href="index.html#clientes">Casos de Éxito</a>
+                        <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
+                        <a href="inmobiliarias.html">Inmobiliarias & Relocation</a>
+                        <a href="index.html">Volver a Inicio</a>
+                    </div>
+                </div>
+
+                <a href="#auditoria" class="btn btn-primary header-cta" style="white-space: nowrap;" onclick="window.openModal ? window.openModal() : null; return false;">AGENDAR REUNIÓN</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section A: Hero -->
+        <section id="hero" class="hero-section clinicas-hero-mobile"
+            style="padding: 8rem 0 0 0; background-color: var(--color-bg-dark);">
+            <div class="container hero-container" style="flex-direction: column; text-align: center;">
+                <div class="hero-content" style="max-width: 900px; margin: 0 auto;">
+                    <p
+                        style="font-size: 1rem; font-weight: 600; color: var(--color-accent-primary); letter-spacing: 2px; margin-bottom: 0.5rem;">
+                        AUTOMATIZACIÓN PARA INMOBILIARIAS Y AGENCIAS DE RELOCATION</p>
+                    <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem;">Deja de
+                        perseguir papeles.<br>Empieza a cerrar más operaciones.</h1>
+                    <p class="hero-subtitle"
+                        style="font-size: 1.25rem; color: var(--color-text-dim); margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                        Transforma el caos de portales, WhatsApps y documentos dispersos en un "Cerebro Digital"
+                        centralizado. Automatiza la captación, el seguimiento de visitas y la gestión documental para
+                        que tus agentes se dediquen a vender, no a hacer de secretarios.</p>
+                    <button class="btn btn-primary btn-large btn-agendar-reunion"
+                        style="font-weight: 700; padding: 18px 35px; font-size: 1.2rem; cursor: pointer; transition: transform 0.2s; white-space: normal;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+                        onclick="window.openModal ? window.openModal() : null;">👉 Solicitar Auditoría Inmobiliaria (15
+                        min)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Pain Points -->
+        <section id="pain-points" class="section-padding alt-bg" style="padding-top: 3rem;">
+            <div class="container">
+                <h2 class="section-title center-text" style="margin-bottom: 1rem;">Vender o alquilar una casa es fácil.
+                    Lo difícil es gestionar todo lo que pasa por el medio.</h2>
+                <p class="center-text" style="color: var(--color-text-dim); font-size: 1.2rem; margin-bottom: 3rem;">
+                    ¿Te suenan estos "ladrones de tiempo" en tu agencia?</p>
+
+                <div class="grid-3" style="margin-bottom: 4rem;">
+                    <div class="card pain-card" style="padding: 2.5rem 2rem;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--color-text-main);">❌ Fuga de
+                            Leads (Portales Inmobiliarios)</h3>
+                        <p style="color: var(--color-text-dim); line-height: 1.6;">Un cliente pide info en Idealista o
+                            Fotocasa un domingo a las 19:00h. Como nadie le responde al instante, el lunes ya ha
+                            alquilado con otra agencia.</p>
+                    </div>
+                    <div class="card pain-card" style="padding: 2.5rem 2rem;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--color-text-main);">❌ El
+                            Laberinto Documental</h3>
+                        <p style="color: var(--color-text-dim); line-height: 1.6;">Perseguir a inquilinos y compradores
+                            por WhatsApp para que te envíen el DNI, las 3 últimas nóminas y el contrato firmado, rezando
+                            para que no falte nada.</p>
+                    </div>
+                    <div class="card pain-card" style="padding: 2.5rem 2rem;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--color-text-main);">❌ Caos
+                            Logístico (Relocation)</h3>
+                        <p style="color: var(--color-text-dim); line-height: 1.6;">Cuadrar agendas imposibles entre el
+                            propietario, el inquilino que llega de otro país, la empresa de mudanzas y los instaladores
+                            de internet.</p>
+                    </div>
+                </div>
+
+                <!-- TEST CTA -->
+                <div
+                    style="background-color: var(--color-bg-dark); border: 2px solid var(--color-accent-tertiary); border-radius: var(--border-radius-lg); padding: 3rem; text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-text-main);">Test de
+                        Eficiencia Inmobiliaria & Relocation</h3>
+                    <p style="font-size: 1.1rem; color: var(--color-text-dim); margin-bottom: 2rem;">¿Cuántas ventas
+                        pierdes al mes por culpa de la burocracia y la falta de seguimiento?</p>
+                    <button class="btn btn-primary btn-large"
+                        style="font-weight: 700; padding: 15px 30px; font-size: 1.1rem; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+                        onclick="window.openTestModal ? window.openTestModal() : null;">REALIZAR TEST EN 2
+                        MINUTOS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Value Proposition -->
+        <section id="solution" class="section-padding">
+            <div class="container">
+                <h2 class="section-title center-text" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Tu Agencia en
+                    Piloto Automático.</h2>
+                <div style="max-width: 800px; margin: 0 auto 4rem auto; text-align: center;">
+                    <p style="font-size: 1.2rem; color: var(--color-text-dim); line-height: 1.6;">Construyo el
+                        ecosistema digital que los CRMs genéricos no te pueden dar. Conecto tus portales, tu correo y tu
+                        WhatsApp para que la información fluya sola y sin errores.</p>
+                </div>
+
+                <div class="value-content">
+                    <div class="benefits-list" style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div class="benefit-item"
+                            style="display: flex; align-items: center; text-align: center; padding: 2.5rem; gap: 1.5rem; flex-direction: column;">
+                            <div
+                                style="font-size: 3rem; background: var(--color-accent-tertiary); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; align-self: center;">
+                                ✅</div>
+                            <div style="flex: 1;">
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-main);">
+                                    Respuesta Inmediata (Lead Nurturing)</h3>
+                                <p style="color: var(--color-text-dim); line-height: 1.6;">Cuando entra un lead de un
+                                    portal, n8n lo registra en tu base de datos (Airtable) y le envía un WhatsApp
+                                    automático perfilando al cliente ("¿Buscas comprar o alquilar? ¿Qué presupuesto
+                                    tienes?") antes de que un agente mueva un dedo.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item"
+                            style="display: flex; align-items: center; text-align: center; padding: 2.5rem; gap: 1.5rem; flex-direction: column;">
+                            <div
+                                style="font-size: 3rem; background: var(--color-accent-tertiary); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; align-self: center;">
+                                🤖</div>
+                            <div style="flex: 1;">
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-main);">
+                                    Onboarding y Documentos "Zero Touch"</h3>
+                                <p style="color: var(--color-text-dim); line-height: 1.6;">Formularios inteligentes que
+                                    recogen DNIs y nóminas, los renombran automáticamente y los guardan en la carpeta
+                                    correcta de Google Drive del cliente.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item"
+                            style="display: flex; align-items: center; text-align: center; padding: 2.5rem; gap: 1.5rem; flex-direction: column;">
+                            <div
+                                style="font-size: 3rem; background: var(--color-accent-tertiary); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; align-self: center;">
+                                🔒</div>
+                            <div style="flex: 1;">
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-main);">
+                                    Control Total de Relocation</h3>
+                                <p style="color: var(--color-text-dim); line-height: 1.6;">Paneles visuales donde puedes
+                                    ver el estado exacto de cada expatriado: ¿Ya tiene las llaves? ¿Están dados de alta
+                                    la luz y el agua? Alertas automáticas para que no se pase ningún plazo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Authority -->
+        <section id="authority" class="section-padding alt-bg">
+            <div class="container">
+                <div class="authority-grid">
+                    <div class="authority-text-col">
+                        <h2 class="section-title" style="margin-bottom: 1.5rem;">Gestionar 100 propiedades es como
+                            gestionar una cadena de suministro. Y de eso, sé un rato.</h2>
+                        <p class="authority-text"
+                            style="color: var(--color-text-dim); margin-bottom: 2.5rem; line-height: 1.6;">Como
+                            Arquitecto de Operaciones Digitales, vengo de gestionar cadenas de producción
+                            internacionales con cientos de referencias cruzadas. Aplicar esa ingeniería de procesos a tu
+                            inmobiliaria significa eliminar el error humano, cruzar la oferta con la demanda en segundos
+                            y dar a tus clientes (propietarios y compradores) una experiencia premium y sin fricciones.
+                        </p>
+                        <button class="btn btn-primary btn-large"
+                            onclick="window.openModal ? window.openModal() : null;"
+                            style="padding: 15px 30px; font-weight: 700;">📅 Hablemos de tu agencia (Reserva tu
+                            sesión)</button>
+                    </div>
+                    <div class="authority-img-col" style="display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="width: 100%; height: 400px; background-color: var(--color-accent-tertiary); border-radius: var(--border-radius-lg); display: flex; align-items: center; justify-content: center; color: var(--color-accent-primary); font-weight: bold; border: 1px solid rgba(0, 128, 128, 0.2);">
+                            [Espacio para foto corporativa]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"
+        style="background-color: var(--color-bg-darker); border-top: 1px solid var(--color-accent-tertiary); color: var(--color-text-dim);">
+        <div class="container footer-content"
+            style="padding: 2rem 0; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div class="footer-left">
+                <p style="margin-bottom: 0;">David Incertis © 2026. Ingeniero de Automatizaciones Digitales.</p>
+            </div>
+            <div class="footer-right">
+                <a href="legal.html" class="legal-link"
+                    style="color: var(--color-accent-primary); text-decoration: none; font-weight: 500;">Aviso Legal y
+                    Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal (Audit) -->
+    <div id="contact-modal" class="modal" id="audit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Auditoría Inmobiliaria</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Déjame tus datos y te contactaré en menos de
+                24h para analizar las ineficiencias de tu flujo de trabajo.</p>
+
+            <div id="form-success" style="display:none; text-align:center; padding: 2rem 0;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--color-text-main);">¡Solicitud enviada!</h3>
+                <p style="color: var(--color-text-dim);">Te contactaré en menos de 24h. Revisa también tu bandeja de
+                    entrada.</p>
+            </div>
+
+            <div id="form-error"
+                style="display:none; background:#ff4c3820; border:1px solid #ff4c38; border-radius:6px; padding:1rem; margin-bottom:1rem; color:#ff4c38; font-size:0.9rem;">
+                Ha ocurrido un error al enviar. Por favor, inténtalo de nuevo.
+            </div>
+
+            <form id="audit-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="especialidad">¿Cuál es tu tipo de agencia?</label>
+                    <select id="especialidad" name="especialidad" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="inmobiliaria_tradicional">Inmobiliaria Tradicional</option>
+                        <option value="agencia_relocation">Agencia de Relocation</option>
+                        <option value="personal_shopper">Personal Shopper Inmobiliario</option>
+                        <option value="freelance">Agente Freelance / Independiente</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Cuéntame brevemente cuáles son tus necesidades</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="presupuesto">Tu presupuesto estimado</label>
+                    <select id="presupuesto" name="presupuesto" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="300-1000">De 300 € a 1.000 €</option>
+                        <option value="1000-3000">De 1.000 € a 3.000 €</option>
+                        <option value="3000+">Más de 3.000 €</option>
+                    </select>
+                </div>
+                <div class="legal-check">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy" style="color: var(--color-text-main);">
+                        He leído y acepto la <a href="legal.html" target="_blank"
+                            style="color: var(--color-accent-primary);">Política de Privacidad</a>
+                    </label>
+                </div>
+                <p class="legal-small-print">
+                    <small style="color: var(--color-text-dim);">
+                        <strong>Responsable:</strong> David Incertis | <strong>Finalidad:</strong> Gestión del contacto.
+                        | <strong>Legitimación:</strong> Tu consentimiento.
+                    </small>
+                </p>
+                <button type="submit" id="submit-btn" class="btn btn-primary"
+                    style="width: 100%; padding: 12px; font-weight: 700;">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Health Test Modal -->
+    <div id="test-modal" class="modal">
+        <div class="modal-content" style="max-width: 650px;">
+            <span class="close-modal" data-target="test-modal">&times;</span>
+            <div id="test-selection" style="text-align: center; padding: 2rem 1rem;">
+                <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Test de Salud Operativa</h2>
+                <p style="margin-bottom: 3rem; color: var(--color-text-dim);">¿Qué tipo de negocio tienes?</p>
+                <div class="test-selection-buttons"
+                    style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn btn-secondary btn-large"
+                        onclick="window.showFreelanceTest ? window.showFreelanceTest() : null;"
+                        style="flex: 1; min-width: 200px; padding: 12px 5px; font-size: 0.9rem; white-space: normal; line-height: 1.3; display: flex; align-items: center; justify-content: center; text-align: center;">Soy
+                        autónomo/freelance</button>
+                    <button class="btn btn-primary btn-large"
+                        onclick="window.showAgencyTest ? window.showAgencyTest() : null;"
+                        style="flex: 1; min-width: 200px; padding: 12px 5px; font-size: 0.9rem; white-space: normal; line-height: 1.3; display: flex; align-items: center; justify-content: center; text-align: center;">Agencias/Inmobiliarias
+                        (PYMES)</button>
+                </div>
+            </div>
+
+            <!-- Test: Agencia / Inmobiliaria (PYME) -->
+            <div id="test-agency" style="display: none;">
+                <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Test de Eficiencia
+                    Inmobiliaria & Relocation</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-dim);">¿Cuántas ventas pierdes al mes por culpa
+                    de la burocracia y la falta de seguimiento?<br><br>Instrucciones: Marca con las situaciones que
+                    ocurren habitualmente en tu agencia.</p>
+
+                <form id="health-test-form-agency">
+                    <div class="test-checkboxes" style="text-align: left; margin-bottom: 2rem;">
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Leads enfriados:</strong> Los
+                                contactos que llegan desde portales inmobiliarios (Idealista, etc.) o tu web tienen que
+                                esperar horas (o hasta el día siguiente) para recibir un primer mensaje o
+                                llamada.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>El "Copia-Pega"
+                                    infinito:</strong> Tu equipo pierde tiempo copiando a mano los datos de un potencial
+                                comprador desde el email hasta un Excel o CRM básico.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Agendas colapsadas:</strong>
+                                Cuadrar la fecha y hora de una visita requiere un mínimo de 4 o 5 intercambios de
+                                WhatsApp entre el agente, el propietario y el interesado.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Seguimiento fantasma:</strong>
+                                Después de enseñar un piso, dependéis de la memoria del agente para acordarse de
+                                escribir al cliente al día siguiente y preguntarle qué le pareció.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Persecución de
+                                    documentos:</strong> Gastáis una energía brutal reclamando DNIs, nóminas o avales
+                                bancarios por WhatsApp, y luego hay que ordenarlos manualmente en carpetas.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Errores en contratos:</strong>
+                                Redactáis los contratos de arras o alquiler modificando plantillas antiguas en Word, lo
+                                que a veces genera errores en nombres, fechas o importes.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>El Propietario
+                                    impaciente:</strong> Los dueños de los inmuebles os llaman constantemente
+                                preguntando "¿Cuánta gente ha visto mi piso?" porque no tienen un reporte automático de
+                                visitas.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Descontrol de llaves:</strong>
+                                No sabéis en todo momento y con exactitud qué agente tiene las llaves de qué propiedad
+                                sin tener que gritarlo por la oficina o ponerlo por el grupo de WhatsApp.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>(Relocation) Proveedores
+                                    desconectados:</strong> Tenéis que escribir emails manuales a las compañías de
+                                suministros (luz, agua, internet) o mudanzas cada vez que entra un cliente nuevo.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-agency"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Ceguera de captación:</strong>
+                                No podéis ver en un gráfico simple en tiempo real qué portal o canal de marketing os
+                                está trayendo los clientes más rentables.</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-large"
+                        onclick="window.calculateAgencyResults ? window.calculateAgencyResults() : null;"
+                        style="width: 100%; padding: 15px; font-weight: 700;">VER EL RESULTADO DE MI TEST</button>
+                    <button type="button" class="btn" onclick="window.resetTest ? window.resetTest() : null;"
+                        style="width: 100%; background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; margin-top: 10px;">Volver</button>
+                </form>
+            </div>
+
+            <!-- Test: Freelance -->
+            <div id="test-freelance" style="display: none;">
+                <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1rem;">Test de Salud Operativa
+                    Inmobiliaria & Relocation (Freelance)</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-dim);">¿Eres un agente inmobiliario o de
+                    relocation freelance? Descubre si tus sistemas te están ayudando a vender o si te están robando el
+                    tiempo.<br><br>Instrucciones: Marca las situaciones que definen tu día a día actual.</p>
+
+                <form id="health-test-form-freelance">
+                    <div class="test-checkboxes" style="text-align: left; margin-bottom: 2rem;">
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Respuesta lenta a
+                                    leads:</strong> Los clientes que contactan por Idealista o tu web tienen que esperar
+                                a que tú tengas un hueco libre para recibir una respuesta, a veces horas después.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>WhatsApp es un agujero
+                                    negro:</strong> Recibes peticiones, fotos de DNIs y dudas por WhatsApp a todas
+                                horas, y te cuesta horrores volcar esa información a una base de datos o Excel.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Agendación manual:</strong>
+                                Pierdes tiempo enviando mensajes de ida y vuelta ("¿Te va bien el martes?", "No, mejor
+                                el miércoles") para cerrar una simple visita.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Falta de filtrado:</strong>
+                                Dedicas tiempo a enseñar pisos a personas que luego no tienen la solvencia necesaria o
+                                cuyas necesidades no encajan, porque no tienes un sistema de cualificación
+                                previa.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Documentación
+                                    dispersa:</strong> Tienes los documentos de tus clientes (contratos, nóminas,
+                                recibos) repartidos entre el email, carpetas del móvil y descargas del PC.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>El "seguimiento" se te
+                                    olvida:</strong> No tienes un sistema que te avise automáticamente para llamar a un
+                                cliente 24 horas después de una visita y pedirle feedback.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Facturación tediosa:</strong>
+                                Al cerrar un alquiler o venta, tienes que ponerte delante del ordenador a redactar la
+                                factura de tus honorarios manualmente.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>(Relocation) Tareas
+                                    repetitivas:</strong> Para cada cliente nuevo de reubicación, tienes que hacer las
+                                mismas gestiones (luz, agua, internet) enviando los mismos emails una y otra vez.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Sin visión de
+                                    ingresos:</strong> No sabes con exactitud cuánto vas a facturar el mes que viene
+                                basándote en tu "pipeline" actual de clientes sin tener que hacer cálculos
+                                manuales.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Eres el cuello de
+                                    botella:</strong> Si un día decides desconectar o te pones enfermo, tu negocio se
+                                detiene por completo porque no hay ninguna automatización atendiendo a los
+                                clientes.</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-large"
+                        onclick="window.calculateFreelanceResults ? window.calculateFreelanceResults() : null;"
+                        style="width: 100%; padding: 15px; font-weight: 700;">VER EL RESULTADO DE MI TEST</button>
+                    <button type="button" class="btn" onclick="window.resetTest ? window.resetTest() : null;"
+                        style="width: 100%; background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; margin-top: 10px;">Volver</button>
+                </form>
+            </div>
+
+            <!-- Test Results -->
+            <div id="test-results" style="display: none; text-align: center; padding: 2rem 1rem;">
+                <div id="result-icon" style="font-size: 4rem; margin-bottom: 1rem;"></div>
+                <h3 id="result-title" style="margin-bottom: 1.5rem; font-size: 1.8rem;"></h3>
+                <p id="result-message"
+                    style="margin-bottom: 2.5rem; color: var(--color-text-main); line-height: 1.6; font-size: 1.1rem;">
+                </p>
+                <button id="result-action-btn" class="btn btn-primary btn-large"
+                    style="width: 100%; max-width: 350px; margin-bottom: 1rem;"></button><br>
+                <button class="btn"
+                    style="background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; cursor: pointer;"
+                    onclick="window.resetTest ? window.resetTest() : null;">Repetir test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- inmobiliarias.js instead of main script.js -->
+    <script src="inmobiliarias.js"></script>
+
+    <!-- Chatbot n8n -->
+    <link href="styles/n8n-chat.css" rel="stylesheet" />
+    <style>
+        :root {
+            --chat--color--primary: #008080;
+            --chat--color--primary-shade-50: #008080;
+            --chat--color--primary--shade-100: #008080;
+        }
+    </style>
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.davidincertis.com/webhook/68f1988c-a67a-453f-b68f-75ec88c05cd1/chat',
+            showWelcomeScreen: true,
+            initialMessages: [
+                'Hola, ¿qué tal?',
+                'Me llamo Eva, ¿En qué te puedo ayudar?'
+            ],
+            i18n: {
+                en: {
+                    title: '¡Hola! 👋',
+                    subtitle: 'Empieza a chatear. Estamos aquí para ayudarte.',
+                    footer: '',
+                    getStarted: 'Nuevo chat',
+                    inputPlaceholder: 'Escribe tu pregunta...'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

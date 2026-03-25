@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas para Clínicas Privadas | David Incertis</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/clinicas.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <img src="Imagenes/David_Incertis_Logo.png" alt="David Incertis Logo" class="logo-img">
+                    <span class="logo-subtitle">INGENIERO DE AUTOMATIZACIONES DIGITALES</span>
+                </a>
+            </div>
+            <nav class="nav header-nav" style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+                <!-- Desktop Menu -->
+                <div class="desktop-menu" style="display: flex; align-items: center;">
+                    <a href="index.html#services" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">SERVICIOS</a>
+                    <a href="index.html#clientes" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">CASOS DE ÉXITO</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">SOLUCIONES<br>POR SECTOR</button>
+                        <div class="dropdown-content">
+                            <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
+                            <a href="inmobiliarias.html">Inmobiliarias & Relocation</a>
+                        </div>
+                    </div>
+                    <a href="index.html" class="home-link" style="color: white !important; margin-right: 20px; font-weight: 700; font-size: 0.85rem;">Volver a Inicio</a>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu dropdown" style="display: none; margin-right: 15px;">
+                    <button class="dropbtn" style="font-size: 1rem; display: flex; align-items: center; gap: 5px;">MENÚ <span style="font-size: 0.7em;">▼</span></button>
+                    <div class="dropdown-content" style="min-width: 200px;">
+                        <a href="index.html#services">Servicios</a>
+                        <a href="index.html#clientes">Casos de Éxito</a>
+                        <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
+                        <a href="inmobiliarias.html">Inmobiliarias & Relocation</a>
+                        <a href="index.html">Volver a Inicio</a>
+                    </div>
+                </div>
+
+                <a href="#auditoria" class="btn btn-primary header-cta" style="white-space: nowrap;" onclick="window.openModal ? window.openModal() : null; return false;">AGENDAR REUNIÓN</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section A: Hero -->
+        <section id="hero" class="hero-section clinicas-hero-mobile"
+            style="padding: 8rem 0 0 0; background-color: var(--color-bg-dark);">
+            <div class="container hero-container" style="flex-direction: column; text-align: center;">
+                <div class="hero-content" style="max-width: 900px; margin: 0 auto;">
+                    <p
+                        style="font-size: 1rem; font-weight: 600; color: var(--color-accent-primary); letter-spacing: 2px; margin-bottom: 0.5rem;">
+                        AUTOMATIZACIONES PARA EL SECTOR SALUD, BIENESTAR Y VETERINARIA</p>
+                    <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem;">Menos
+                        horas de papeleo.<br>Más tiempo para tus pacientes.</h1>
+                    <p class="hero-subtitle"
+                        style="font-size: 1.25rem; color: var(--color-text-dim); margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                        Diseño ecosistemas de gestión a medida para clínicas privadas. Elimina las inasistencias
+                        ("no-shows"), automatiza la atención por WhatsApp y centraliza tus historiales clínicos con
+                        privacidad extrema y sin multiplicar tu plantilla.</p>
+                    <button class="btn btn-primary btn-large btn-agendar-reunion"
+                        style="font-weight: 700; padding: 18px 35px; font-size: 1.2rem; cursor: pointer; transition: transform 0.2s; white-space: normal;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+                        onclick="window.openModal ? window.openModal() : null;">👉 SOLICITAR REUNIÓN (15 MIN)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Pain Points -->
+        <section id="pain-points" class="section-padding alt-bg" style="padding-top: 3rem;">
+            <div class="container">
+                <h2 class="section-title center-text" style="margin-bottom: 1rem;">Sabemos que el trabajo de tu clínica
+                    no termina cuando el paciente sale por la puerta.</h2>
+                <p class="center-text" style="color: var(--color-text-dim); font-size: 1.2rem; margin-bottom: 3rem;">
+                    ¿Con cuántos de estos "cuellos de botella" lidias cada semana?</p>
+
+                <div class="grid-3" style="margin-bottom: 4rem;">
+                    <div class="card pain-card" style="padding: 2.5rem 2rem;">
+                        <img src="Imagenes/noshow.png" alt="No-Show de pacientes"
+                            style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; display: block;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--color-text-main);">❌ El temido
+                            "No-Show" (Inasistencias)</h3>
+                        <p style="color: var(--color-text-dim); line-height: 1.6;">Huecos vacíos en tu agenda de última
+                            hora que te hacen perder dinero cada semana porque el paciente "se olvidó" y nadie le avisó
+                            a tiempo.</p>
+                    </div>
+                    <div class="card pain-card" style="padding: 2.5rem 2rem;">
+                        <img src="Imagenes/saturacion.png" alt="Saturación en recepción"
+                            style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; display: block;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--color-text-main);">❌ Saturación
+                            en Recepción</h3>
+                        <p style="color: var(--color-text-dim); line-height: 1.6;">Tu equipo (o tú mismo) pierde horas
+                            al día jugando al ping-pong por WhatsApp o teléfono solo para cuadrar una cita o recordar
+                            una revisión anual.</p>
+                    </div>
+                    <div class="card pain-card" style="padding: 2.5rem 2rem;">
+                        <img src="Imagenes/caos.png" alt="Caos documental de historiales"
+                            style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; display: block;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--color-text-main);">❌ El Caos del
+                            Historial</h3>
+                        <p style="color: var(--color-text-dim); line-height: 1.6;">Documentos de consentimiento (RGPD)
+                            en papel, fichas desperdigadas en distintos programas y facturas que se hacen a mano a final
+                            de mes.</p>
+                    </div>
+                </div>
+
+                <!-- TEST CTA -->
+                <div
+                    style="background-color: var(--color-bg-dark); border: 2px solid var(--color-accent-tertiary); border-radius: var(--border-radius-lg); padding: 3rem; text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-text-main);">Test de
+                        Eficiencia para Clínicas Privadas</h3>
+                    <p style="font-size: 1.1rem; color: var(--color-text-dim); margin-bottom: 2rem;">¿Cuántos pacientes
+                        (y dinero) pierdes al mes por no tener tu clínica digitalizada?</p>
+                    <button class="btn btn-primary btn-large"
+                        style="font-weight: 700; padding: 15px 30px; font-size: 1.1rem; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+                        onclick="window.openTestModal ? window.openTestModal() : null;">REALIZAR TEST EN 2
+                        MINUTOS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Value Proposition -->
+        <section id="solution" class="section-padding">
+            <div class="container">
+                <h2 class="section-title center-text" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Tu nuevo sistema
+                    Automatizado.<br>Seguro, invisible y trabajando 24/7.</h2>
+                <div style="max-width: 800px; margin: 0 auto 4rem auto; text-align: center;">
+                    <p style="font-size: 1.2rem; color: var(--color-text-dim); line-height: 1.6;">No vengo a venderte un
+                        software genérico de gestión que te obligue a cambiar tu forma de trabajar. Construyo un sistema
+                        a medida de tu clínica, conectando las herramientas que ya usas mediante automatización
+                        avanzada.</p>
+                </div>
+
+                <div class="value-content">
+                    <div class="benefits-list" style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div class="benefit-item"
+                            style="display: flex; align-items: center; text-align: center; padding: 2.5rem; gap: 1.5rem; flex-direction: column;">
+                            <div
+                                style="font-size: 3rem; background: var(--color-accent-tertiary); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; align-self: center;">
+                                ✅</div>
+                            <div style="flex: 1;">
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-main);">
+                                    Agenda Blindada (Cero "No-Shows")</h3>
+                                <p style="color: var(--color-text-dim); line-height: 1.6;">Implemento recordatorios
+                                    automáticos e interactivos por WhatsApp. Si el paciente cancela, el sistema avisa
+                                    automáticamente al siguiente en tu lista de espera para rellenar el hueco. Tu agenda
+                                    siempre optimizada.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item"
+                            style="display: flex; align-items: center; text-align: center; padding: 2.5rem; gap: 1.5rem; flex-direction: column;">
+                            <div
+                                style="font-size: 3rem; background: var(--color-accent-tertiary); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; align-self: center;">
+                                🤖</div>
+                            <div style="flex: 1;">
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-main);">
+                                    Triaje y Onboarding Inteligente</h3>
+                                <p style="color: var(--color-text-dim); line-height: 1.6;">Desde bots de IA que
+                                    responden dudas frecuentes en WhatsApp, hasta formularios automáticos que recopilan
+                                    el historial médico y la firma de RGPD antes de que el paciente pise la clínica.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item"
+                            style="display: flex; align-items: center; text-align: center; padding: 2.5rem; gap: 1.5rem; flex-direction: column;">
+                            <div
+                                style="font-size: 3rem; background: var(--color-accent-tertiary); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; align-self: center;">
+                                🔒</div>
+                            <div style="flex: 1;">
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text-main);">
+                                    Privacidad Extrema (RGPD Compliant)</h3>
+                                <p style="color: var(--color-text-dim); line-height: 1.6;">A diferencia de otros
+                                    consultores, utilizo infraestructuras avanzadas como n8n para asegurar que los datos
+                                    médicos y sensibles de tus pacientes (o mascotas) nunca pasen por servidores
+                                    públicos no autorizados. Seguridad de nivel hospitalario para tu clínica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Authority -->
+        <section id="authority" class="section-padding alt-bg">
+            <div class="container">
+                <div class="authority-grid">
+                    <div class="authority-text-col">
+                        <h2 class="section-title" style="margin-bottom: 1.5rem;">Domina tu operativa antes de que ella
+                            te domine a ti.</h2>
+                        <p class="authority-text"
+                            style="color: var(--color-text-dim); margin-bottom: 1.5rem; line-height: 1.6;">Como
+                            Ingeniero de Automatizaciones, he gestionado bases de datos complejas con cientos de
+                            variables en entornos internacionales. Sé lo crítico que es que un dato no falle.</p>
+                        <p class="authority-text"
+                            style="color: var(--color-text-dim); margin-bottom: 2.5rem; line-height: 1.6;">Hoy, pongo
+                            esa misma ingeniería al servicio de tu clínica (odontología, fisioterapia, veterinaria,
+                            podología o estética) para que tú solo tengas que preocuparte de lo más importante:
+                            <strong>cuidar de tus pacientes.</strong>
+                        </p>
+                        <button class="btn btn-primary btn-large"
+                            onclick="window.openModal ? window.openModal() : null;"
+                            style="padding: 15px 30px; font-weight: 700;">📅 Hablemos de tu clínica (Reserva tu
+                            sesión)</button>
+                    </div>
+                    <div class="authority-img-col" style="display: flex; align-items: center; justify-content: center;">
+                        <img src="Imagenes/David_Clinica.png" alt="David Incertis Consultoría para Clínicas"
+                            style="max-width: 100%; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"
+        style="background-color: var(--color-bg-darker); border-top: 1px solid var(--color-accent-tertiary); color: var(--color-text-dim);">
+        <div class="container footer-content"
+            style="padding: 2rem 0; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div class="footer-left">
+                <p style="margin-bottom: 0;">David Incertis © 2026. Ingeniero de Automatizaciones Digitales.</p>
+            </div>
+            <div class="footer-right">
+                <a href="legal.html" class="legal-link"
+                    style="color: var(--color-accent-primary); text-decoration: none; font-weight: 500;">Aviso Legal y
+                    Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal (Audit) -->
+    <div id="contact-modal" class="modal" id="audit-modal">
+        <!-- Using contact-modal styling structure but with ID audit-modal for logic -->
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Auditoría Clínica</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Déjame tus datos y te contactaré en menos de
+                24h para analizar las fugas de tu centro.</p>
+
+            <div id="form-success" style="display:none; text-align:center; padding: 2rem 0;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--color-text-main);">¡Solicitud enviada!</h3>
+                <p style="color: var(--color-text-dim);">Te contactaré en menos de 24h. Revisa también tu bandeja de
+                    entrada.</p>
+            </div>
+
+            <div id="form-error"
+                style="display:none; background:#ff4c3820; border:1px solid #ff4c38; border-radius:6px; padding:1rem; margin-bottom:1rem; color:#ff4c38; font-size:0.9rem;">
+                Ha ocurrido un error al enviar. Por favor, inténtalo de nuevo.
+            </div>
+
+            <form id="audit-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="especialidad">¿Cuál es la especialidad de tu clínica?</label>
+                    <select id="especialidad" name="especialidad" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="odontologia">Odontología</option>
+                        <option value="fisioterapia">Fisioterapia / Osteopatía</option>
+                        <option value="veterinaria">Veterinaria</option>
+                        <option value="estetica">Medicina Estética</option>
+                        <option value="psicologia">Psicología / Psiquiatría</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Cuéntame brevemente cuáles son tus necesidades</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="presupuesto">Tu presupuesto estimado</label>
+                    <select id="presupuesto" name="presupuesto" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="300-1000">De 300 € a 1.000 €</option>
+                        <option value="1000-3000">De 1.000 € a 3.000 €</option>
+                        <option value="3000+">Más de 3.000 €</option>
+                    </select>
+                </div>
+                <div class="legal-check">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy" style="color: var(--color-text-main);">
+                        He leído y acepto la <a href="legal.html" target="_blank"
+                            style="color: var(--color-accent-primary);">Política de Privacidad</a>
+                    </label>
+                </div>
+                <p class="legal-small-print">
+                    <small style="color: var(--color-text-dim);">
+                        <strong>Responsable:</strong> David Incertis | <strong>Finalidad:</strong> Gestión del contacto.
+                        | <strong>Legitimación:</strong> Tu consentimiento.
+                    </small>
+                </p>
+                <button type="submit" id="submit-btn" class="btn btn-primary"
+                    style="width: 100%; padding: 12px; font-weight: 700;">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Health Test Modal -->
+    <div id="test-modal" class="modal">
+        <div class="modal-content" style="max-width: 650px;">
+            <span class="close-modal" data-target="test-modal">&times;</span>
+            <div id="test-intro">
+                <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Test de Eficiencia para
+                    Clínicas</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-dim);">Marca con un tick las situaciones que
+                    ocurren habitualmente en la gestión diaria de tu centro:</p>
+
+                <form id="health-test-form">
+                    <div class="test-checkboxes" style="text-align: left; margin-bottom: 2rem;">
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>"No-Show" silencioso:</strong>
+                                Tienes huecos vacíos en la agenda de última hora porque un paciente olvidó su cita y no
+                                recibió un recordatorio automático por WhatsApp.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Ping-pong de
+                                    recepción:</strong> Tu equipo (o tú mismo) pierde horas al día intercambiando
+                                mensajes o llamadas solo para cuadrar la fecha y hora de una primera visita.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Papeleo en la sala de
+                                    espera:</strong> Los pacientes (o clientes) siguen rellenando historiales médicos y
+                                consentimientos de protección de datos (RGPD) en papel que luego alguien debe teclear a
+                                mano en el ordenador.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Dinero invisible:</strong>
+                                Pierdes ingresos recurrentes porque nadie avisa sistemáticamente a los pacientes de que
+                                les toca su revisión anual, limpieza o vacunación.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Lista de espera
+                                    inútil:</strong> Si alguien cancela en el mismo día, ese hueco se queda sin facturar
+                                porque avisar a la lista de espera manualmente es lento y casi nunca da tiempo.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Gestión de stock "a
+                                    ojo":</strong> Te has quedado sin material clínico clave (viales, fungibles,
+                                medicación) en medio de la semana porque el control de inventario no está
+                                automatizado.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Facturación
+                                    prehistórica:</strong> Alguien de tu equipo tiene que invertir tardes enteras a
+                                final de mes generando facturas manualmente para enviarlas a los pacientes o a la
+                                gestoría.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Ausencia de
+                                    post-cuidado:</strong> El seguimiento tras un tratamiento importante (preguntar
+                                "¿Qué tal te encuentras hoy?") depende de que tú o tu equipo os acordéis de escribirles
+                                manualmente.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Riesgo legal:</strong> Usáis
+                                WhatsApps personales o Excels básicos no encriptados para compartir o guardar
+                                información de pacientes, asumiendo un riesgo enorme con la Ley de Protección de
+                                Datos.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid var(--color-accent-tertiary); transition: background 0.2s;"
+                            onmouseover="this.style.background='#ffffff'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Ceguera financiera:</strong> A
+                                final de mes, no puedes saber con un solo clic qué tratamiento te deja mayor margen de
+                                beneficio o qué día de la semana es el más rentable.</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-large" onclick="calculateResults()"
+                        style="width: 100%; padding: 15px; font-weight: 700;">VER EL RESULTADO DE MI TEST</button>
+                </form>
+            </div>
+
+            <div id="test-results" style="display: none; text-align: center; padding: 2rem 1rem;">
+                <div id="result-icon" style="font-size: 4rem; margin-bottom: 1rem;"></div>
+                <h3 id="result-title" style="margin-bottom: 1.5rem; font-size: 1.8rem;"></h3>
+                <p id="result-message"
+                    style="margin-bottom: 2.5rem; color: var(--color-text-main); line-height: 1.6; font-size: 1.1rem;">
+                </p>
+                <button id="result-action-btn" class="btn btn-primary btn-large"
+                    style="width: 100%; max-width: 350px; margin-bottom: 1rem;"></button><br>
+                <button class="btn"
+                    style="background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; cursor: pointer;"
+                    onclick="resetTest()">Repetir test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Replace script.js with new clinicas.js to avoid collisions and use new webhook/logic -->
+    <script src="clinicas.js"></script>
+
+    <!-- Chatbot n8n -->
+    <link href="styles/n8n-chat.css" rel="stylesheet" />
+    <style>
+        :root {
+            --chat--color--primary: #8a5a9c;
+            --chat--color--primary-shade-50: #8a5a9c;
+            --chat--color--primary--shade-100: #8a5a9c;
+        }
+    </style>
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.davidincertis.com/webhook/68f1988c-a67a-453f-b68f-75ec88c05cd1/chat',
+            showWelcomeScreen: true,
+            initialMessages: [
+                'Hola, ¿qué tal?',
+                'Me llamo Eva, ¿En qué te puedo ayudar?'
+            ],
+            i18n: {
+                en: {
+                    title: '¡Hola! 👋',
+                    subtitle: 'Empieza a chatear. Estamos aquí para ayudarte.',
+                    footer: '',
+                    getStarted: 'Nuevo chat',
+                    inputPlaceholder: 'Escribe tu pregunta...'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

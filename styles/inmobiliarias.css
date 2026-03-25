@@ -1,0 +1,143 @@
+/* inmobiliarias.css - Light theme for Real Estate Sublanding */
+
+:root {
+    /* Main background */
+    --color-bg-dark: #ffffff;
+
+    /* Very light teal/grey for cards */
+    --color-bg-darker: #f0f7f7;
+
+    /* Modals */
+    --color-bg-lighter: #ffffff;
+
+    /* Dark text for readability */
+    --color-text-main: #2d3a3a;
+
+    /* Subdued text */
+    --color-text-dim: #5c6c6c;
+
+    /* Teal/Green Accents */
+    /* Primary action color, darker Teal */
+    --color-accent-primary: #008080;
+
+    /* Hover states or secondary actions, lighter Teal */
+    --color-accent-secondary: #20b2aa;
+
+    /* Subtle background accents */
+    --color-accent-tertiary: #cce6e6;
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-main);
+}
+
+.card,
+.pain-card,
+.service-card {
+    background-color: var(--color-bg-darker);
+    border: 1px solid var(--color-accent-tertiary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover,
+.pain-card:hover,
+.service-card:hover {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.15);
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--color-accent-tertiary);
+}
+
+.logo-subtitle {
+    color: var(--color-text-dim);
+}
+
+.header-social-link {
+    color: var(--color-text-main);
+}
+
+.header-social-link:hover {
+    color: var(--color-accent-primary);
+}
+
+/* Modals & Forms */
+.modal-content {
+    background-color: var(--color-bg-dark);
+    border: 1px solid var(--color-accent-tertiary);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background-color: #ffffff;
+    border: 1px solid var(--color-accent-tertiary);
+    color: var(--color-text-main);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.2);
+}
+
+.close-modal {
+    color: var(--color-text-dim);
+}
+
+.close-modal:hover {
+    color: var(--color-accent-primary);
+}
+
+/* Value Prop / Pillars overrides */
+.benefits-list .benefit-item {
+    background-color: var(--color-bg-darker);
+    border: 1px solid var(--color-accent-tertiary);
+}
+
+.hero-title,
+.section-title {
+    color: var(--color-text-main);
+}
+
+/* Make header link fit with light theme */
+.nav a.home-link {
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+    font-size: 0.95rem;
+}
+
+.nav a.home-link:hover {
+    color: var(--color-accent-primary);
+}
+
+.btn-primary {
+    background-color: var(--color-accent-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-secondary);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    border: 2px solid var(--color-accent-primary);
+    color: var(--color-text-main);
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-primary);
+    color: #ffffff !important;
+}
+
+.section-padding.alt-bg {
+    background-color: var(--color-bg-darker);
+}

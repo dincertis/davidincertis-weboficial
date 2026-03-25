@@ -1,0 +1,898 @@
+David Incertis © 2025. Ingeniero de Automatizaciones Digitales
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Incertis | Ingeniero de Automatizaciones Digitales</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-left">
+                <a href="#" class="logo-link">
+                    <img src="Imagenes/David_Incertis_Logo.png" alt="David Incertis Logo" class="logo-img">
+                    <span class="logo-subtitle">INGENIERO DE AUTOMATIZACIONES DIGITALES</span>
+                </a>
+                <a href="https://www.linkedin.com/in/david-incertis-755161174/" target="_blank"
+                    class="header-social-link" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://www.malt.es/profile/davidincertis" target="_blank" class="header-social-link"
+                    aria-label="Malt" style="margin-left: 15px;">
+                    <img src="Imagenes/malt-logo-red.svg" alt="Malt Logo"
+                        style="height: 20px; width: auto; display: block;">
+                </a>
+            </div>
+            <nav class="nav header-nav" style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+                <!-- Desktop Menu -->
+                <div class="desktop-menu" style="display: flex; align-items: center;">
+                    <a href="#services" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">SERVICIOS</a>
+                    <a href="#clientes" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">CASOS DE ÉXITO</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">SOLUCIONES<br>POR SECTOR</button>
+                        <div class="dropdown-content">
+                            <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
+                            <a href="inmobiliarias.html">Inmobiliarias & Relocation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu dropdown" style="display: none; margin-right: 15px;">
+                    <button class="dropbtn" style="font-size: 1rem; display: flex; align-items: center; gap: 5px;">MENÚ <span style="font-size: 0.7em;">▼</span></button>
+                    <div class="dropdown-content" style="min-width: 200px;">
+                        <a href="#services">Servicios</a>
+                        <a href="#clientes">Casos de Éxito</a>
+                        <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
+                        <a href="inmobiliarias.html">Inmobiliarias & Relocation</a>
+                    </div>
+                </div>
+
+                <a href="#auditoria" class="btn btn-primary header-cta" style="white-space: nowrap;">Agendar reunión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section A: Hero -->
+        <section id="hero" class="hero-section">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="VIDEO/Hexagon_waves.mp4?v=2" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; max-width: 1200px; margin: 0 auto; text-align: left; flex-wrap: wrap-reverse;">
+                    <div class="hero-text-col" style="flex: 1.5; min-width: 300px; max-width: 700px;">
+                        <h1 class="hero-title" style="text-align: left; margin-bottom: 1.5rem; line-height: 1.05;">Ingeniero de <br>Automatizaciones <br>e Inteligencia Artificial.</h1>
+                        <p class="hero-subtitle" style="text-align: left; font-size: 1.5rem; color: var(--color-text-muted); margin-bottom: 2.5rem; margin-left: 0; max-width: 100%;">Experto en entornos de alta complejidad.</p>
+                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600; color: white; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 8px; display: inline-block; border: 1px solid rgba(255,255,255,0.1); text-shadow: 0 2px 4px rgba(0,0,0,0.5); backdrop-filter: blur(4px);">EVALÚA EN 3 MINUTOS EL ESTADO DE SALUD DE TU NEGOCIO</p>
+                        <button class="btn btn-secondary btn-large" style="background-color: var(--color-accent-secondary); color: var(--color-bg-dark); font-weight: 700; border: none; padding: 15px 30px; font-size: 1.1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openTestModal()">HAZ EL TEST</button>
+                    </div>
+                    <div class="hero-img-col" style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center;">
+                        <img src="Imagenes/David.jpg" alt="David Incertis" style="width: 100%; max-width: 550px; aspect-ratio: 4/5; object-fit: cover; object-position: right center; border-radius: var(--border-radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolkit Marquee -->
+        <div class="toolkit-marquee-wrapper">
+            <div class="toolkit-marquee">
+                <img src="Imagenes/Toolkit/1-N8n-logo-new.svg.png" alt="n8n">
+                <img src="Imagenes/Toolkit/2-OpenAI_Logo.svg.png" alt="OpenAI">
+                <img src="Imagenes/Toolkit/3-AI_Studio.png" alt="AI Studio">
+                <img src="Imagenes/Toolkit/4-Make.png" alt="Make">
+                <img src="Imagenes/Toolkit/5-cursor.svg" alt="Cursor">
+                <img src="Imagenes/Toolkit/6-Claude_AI_logo.svg.png" alt="Claude">
+                <img src="Imagenes/Toolkit/7-antigravity.jpg" alt="Antigravity">
+                <img src="Imagenes/Toolkit/8-Airtable-Logo.png" alt="Airtable">
+                <img src="Imagenes/Toolkit/9-Python_logo_and_wordmark.svg.png" alt="Python">
+                <img src="Imagenes/Toolkit/10-JavaScript-Symbol.png" alt="JavaScript">
+                <img src="Imagenes/Toolkit/11-Meta_Platforms_Inc._logo.svg.png" alt="Meta">
+                <!-- Duplicate set for infinite loop -->
+                <img src="Imagenes/Toolkit/1-N8n-logo-new.svg.png" alt="n8n">
+                <img src="Imagenes/Toolkit/2-OpenAI_Logo.svg.png" alt="OpenAI">
+                <img src="Imagenes/Toolkit/3-AI_Studio.png" alt="AI Studio">
+                <img src="Imagenes/Toolkit/4-Make.png" alt="Make">
+                <img src="Imagenes/Toolkit/5-cursor.svg" alt="Cursor">
+                <img src="Imagenes/Toolkit/6-Claude_AI_logo.svg.png" alt="Claude">
+                <img src="Imagenes/Toolkit/7-antigravity.jpg" alt="Antigravity">
+                <img src="Imagenes/Toolkit/8-Airtable-Logo.png" alt="Airtable">
+                <img src="Imagenes/Toolkit/9-Python_logo_and_wordmark.svg.png" alt="Python">
+                <img src="Imagenes/Toolkit/10-JavaScript-Symbol.png" alt="JavaScript">
+                <img src="Imagenes/Toolkit/11-Meta_Platforms_Inc._logo.svg.png" alt="Meta">
+            </div>
+        </div>
+
+        <!-- Section E: Services -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <h3 class="section-title center-text">Mis servicios</h3>
+            </div>
+            <div class="container">
+                <div class="grid-3">
+                    <div class="card service-card" id="audit-card" style="cursor: pointer;">
+                        <h3>Auditoría y diseño de Integración de la IA</h3>
+                        <p class="service-tag">Diagnóstico de tu situación actual y estrategia para la mejora.</p>
+                        <p class="click-more">Haz click para saber más</p>
+                    </div>
+                    <div class="card service-card" id="brain-card" style="cursor: pointer;">
+                        <h3>Automatización de tus procesos</h3>
+                        <p class="service-tag">Deja a la IA que trabaje por ti y dedica el tiempo a lo que de verdad necesitas.</p>
+                        <p class="click-more">Haz click para saber más</p>
+                    </div>
+                    <div class="card service-card" id="consulting-card" style="cursor: pointer;">
+                        <h3>Agentes de Inteligencia Artificial</h3>
+                        <p class="service-tag">Ten uno o varios agentes trabajando para ti 24/7.</p>
+                        <p class="click-more">Haz click para saber más</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 4rem;">
+                <h4 class="section-title center-text" style="font-size: 1.25rem; margin-bottom: 2rem; color: var(--color-text-dim);">Otros servicios</h4>
+                <div class="grid-3">
+                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; cursor: default;">
+                        <h3 style="margin-bottom: 0; font-size: 1.1rem;">Diseño de páginas web</h3>
+                    </div>
+                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; cursor: default;">
+                        <h3 style="margin-bottom: 0; font-size: 1.1rem;">Desarrollo Frontend</h3>
+                    </div>
+                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; cursor: default;">
+                        <h3 style="margin-bottom: 0; font-size: 1.1rem;">Diseño gráfico</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Segment Clients -->
+        <section id="clientes" class="section-padding" style="padding-top: 2rem; padding-bottom: 2rem; background-color: #f4f7f6; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+            <div class="container">
+                <h3 class="section-title center-text" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--color-bg-primary);">Clientes que ya se benefician de la IA</h3>
+                <p class="center-text" style="font-size: 1rem; margin-bottom: 3rem; color: #4a5568;">Pincha sobre cada uno y consulta el caso de éxito</p>
+                <div class="client-logos" style="display: flex; flex-direction: column; align-items: center; gap: 4rem;">
+                    <!-- Row 1 -->
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; width: 100%;">
+                        <div id="client-chou" class="client-logo" style="background-color: #1A3A4A; mix-blend-mode: multiply; border: 2px solid white; border-radius: 4px; will-change: transform; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; opacity: 0.8; cursor: pointer; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1) translateY(-2px)'; this.style.boxShadow='6px 6px 18px rgba(0,0,0,0.2)';" onmouseout="this.style.opacity='0.8'; this.style.transform='scale(1)'; this.style.boxShadow='4px 4px 12px rgba(0,0,0,0.15)';">
+                            <img src="Imagenes/Clientes/Chou_Gabriel.png" alt="El Chou de Gabriel Incertis" style="max-height: 125px; max-width: 325px; object-fit: contain; background-color: white; mix-blend-mode: screen; filter: grayscale(100%) contrast(1.2);">
+                        </div>
+                        <div id="client-workshop" class="client-logo" style="background-color: #1A3A4A; mix-blend-mode: multiply; border: 2px solid white; border-radius: 4px; will-change: transform; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; opacity: 0.8; cursor: pointer; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1) translateY(-2px)'; this.style.boxShadow='6px 6px 18px rgba(0,0,0,0.2)';" onmouseout="this.style.opacity='0.8'; this.style.transform='scale(1)'; this.style.boxShadow='4px 4px 12px rgba(0,0,0,0.15)';">
+                            <img src="Imagenes/Clientes/The_Workshop.jpeg" alt="The Workshop" style="max-height: 125px; max-width: 325px; object-fit: contain; background-color: white; mix-blend-mode: screen; filter: grayscale(100%) contrast(3);">
+                        </div>
+                        <div id="client-isabel" class="client-logo" style="background-color: #1A3A4A; mix-blend-mode: multiply; border: 2px solid white; border-radius: 4px; will-change: transform; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; opacity: 0.8; cursor: pointer; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1) translateY(-2px)'; this.style.boxShadow='6px 6px 18px rgba(0,0,0,0.2)';" onmouseout="this.style.opacity='0.8'; this.style.transform='scale(1)'; this.style.boxShadow='4px 4px 12px rgba(0,0,0,0.15)';">
+                            <img src="Imagenes/Clientes/ISABEL_COBO.webp" alt="Isabel Cobo" style="max-height: 100px; max-width: 275px; object-fit: contain; background-color: white; mix-blend-mode: screen; filter: grayscale(100%) contrast(3);">
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; width: 100%;">
+                        <div id="client-doctor" class="client-logo" style="background-color: #1A3A4A; mix-blend-mode: multiply; border: 2px solid white; border-radius: 4px; will-change: transform; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; opacity: 0.8; cursor: pointer; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1) translateY(-2px)'; this.style.boxShadow='6px 6px 18px rgba(0,0,0,0.2)';" onmouseout="this.style.opacity='0.8'; this.style.transform='scale(1)'; this.style.boxShadow='4px 4px 12px rgba(0,0,0,0.15)';">
+                            <img src="Imagenes/Clientes/DOCTOR COLLECTOR-low.jpg" alt="Doctor Collector" style="max-height: 125px; max-width: 325px; object-fit: contain; background-color: white; mix-blend-mode: screen; filter: grayscale(100%) contrast(1.2);">
+                        </div>
+                        <div id="client-agua" class="client-logo" style="background-color: #1A3A4A; mix-blend-mode: multiply; border: 2px solid white; border-radius: 4px; will-change: transform; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; opacity: 0.8; cursor: pointer; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1) translateY(-2px)'; this.style.boxShadow='6px 6px 18px rgba(0,0,0,0.2)';" onmouseout="this.style.opacity='0.8'; this.style.transform='scale(1)'; this.style.boxShadow='4px 4px 12px rgba(0,0,0,0.15)';">
+                            <img src="Imagenes/Clientes/Agua_Ecosocial.png" alt="Agua Ecosocial" style="max-height: 125px; max-width: 325px; object-fit: contain; background-color: white; mix-blend-mode: screen; filter: grayscale(100%) contrast(3);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Pain Points -->
+        <section id="pain-points" class="section-padding">
+            <div class="container">
+                <h2 class="section-title center-text">¿Te suena familiar?</h2>
+                <p class="center-text" style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">Si te identificas con alguna de estas situaciones, entonces puedo ayudarte.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto;">
+                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
+                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
+                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Buceas entre excels infinitos</strong> y nunca sabes en qué versión del documento estás.</p>
+                    </div>
+                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
+                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
+                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>No conoces el estado real de tu negocio</strong> porque te cuesta acceder a los datos clave cuando los necesitas.</p>
+                    </div>
+                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
+                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
+                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Pierdes horas copiando y pegando</strong> datos a mano, asumiendo un alto riesgo de cometer costosos errores.</p>
+                    </div>
+                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
+                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
+                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Se te escapan oportunidades con nuevos clientes</strong> por no contar con un sistema de captación ordenado y centralizado.</p>
+                    </div>
+                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
+                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
+                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Toda la operativa depende de ti</strong> (o de una sola persona clave). Si esa persona falla, el flujo de trabajo se paraliza por completo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Value Proposition -->
+        <section id="value-prop" class="section-padding">
+            <div class="container">
+                <h2 class="section-title center-text">No necesitas más personal, necesitas automatizar tus procesos y
+                    reducir horas de trabajo repetitivo.</h2>
+                
+                <div class="highlight-box" style="margin: 3rem auto 4rem auto; max-width: 800px; padding: 2.5rem; background-color: var(--color-bg-darker); border: 1px solid rgba(255,255,255,0.05); border-left: 4px solid var(--color-accent-secondary); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+                    <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-text-main);">Pongo la Inteligencia Artificial a trabajar en tu negocio, para que tú trabajes menos.</p>
+                    <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem; line-height: 1.6;">Convierto el caos de tu día a día en un sistema ordenado. Automatizo la atención al cliente y el papeleo para que tú y tu equipo rindáis el doble sin estrés.</p>
+                    <ul style="text-align: left; font-size: 1.05rem; list-style-type: none; padding-left: 0; color: var(--color-text-dim); margin-bottom: 0;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;"><span style="color: var(--color-accent-secondary); margin-right: 10px; font-weight: bold;">✓</span><span><strong style="color: var(--color-text-main);">Cero leads perdidos:</strong> Captación automática a cualquier hora del día.</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;"><span style="color: var(--color-accent-secondary); margin-right: 10px; font-weight: bold;">✓</span><span><strong style="color: var(--color-text-main);">Procesos ordenados:</strong> Tu Excel, tu CRM y tu correo por fin se entienden.</span></li>
+                        <li style="margin-bottom: 0; display: flex; align-items: flex-start;"><span style="color: var(--color-accent-secondary); margin-right: 10px; font-weight: bold;">✓</span><span><strong style="color: var(--color-text-main);">Implementación a tu medida:</strong> Soluciones llave en mano en menos de un mes.</span></li>
+                    </ul>
+                </div>
+
+                <div class="value-content">
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <img src="Imagenes/centralizar.png" alt="Centralizar" class="benefit-img">
+                            <h3>Centralizar</h3>
+                            <p>Unifico tu información.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="Imagenes/automatizar.png" alt="Automatizar" class="benefit-img">
+                            <h3>Automatizar</h3>
+                            <p>Conecto tus herramientas.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="Imagenes/visualizar.jpg" alt="Visualizar" class="benefit-img">
+                            <h3>Visualizar</h3>
+                            <p>Paneles de control en tiempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Authority -->
+        <section id="authority" class="section-padding alt-bg">
+            <div class="container">
+                <div class="container">
+                    <div class="authority-grid" style="align-items: center; margin-bottom: 3rem; justify-content: center;">
+                        <div class="authority-text-col" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                            <h2 class="section-title">Experiencia en entornos de alta complejidad.</h2>
+                            <p class="authority-text">Ante todo hay que ser práctico: He implementado integraciones y
+                                automatizaciones para
+                                gestionar la producción de cientos de artículos al año y su importación desde China.
+                                Esta experiencia la puedo aplicar a tu empresa para mejorar tu eficiencia y
+                                productividad.</p>
+                        </div>
+                        </div>
+                    <div class="stats-grid" style="justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div class="stat-item">
+                            <span class="stat-number">+10</span>
+                            <span class="stat-label">horas/semana ahorradas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">0%</span>
+                            <span class="stat-label">Errores financieros<br>y operativos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Gestión Remota</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">Ahorro en costos<br>promedio</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Soporte<br>disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section F: Lead Magnet & Footer -->
+        <section id="contact" class="footer-cta section-padding" style="padding-top: 2rem;">
+            <div class="container center-text"
+                style="display: flex; justify-content: space-around; align-items: stretch; flex-wrap: wrap; gap: 2rem;">
+                <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+                    <h2 class="section-title"
+                        style="font-size: 1.5rem; margin-bottom: 2rem; text-transform: uppercase;">EVALÚA EN 3 MINUTOS
+                        EL ESTADO DE SALUD DE TU NEGOCIO</h2>
+                    <div style="margin-top: auto;">
+                        <button class="btn btn-secondary btn-large"
+                            style="background-color: var(--color-accent-secondary); color: var(--color-bg-dark); font-weight: 700; border: none; padding: 15px 30px; line-height: 1.5; font-size: 1.1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'" onclick="openTestModal()">HAZ EL TEST</button>
+                    </div>
+                </div>
+                <div class="final-cta-box" style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+                    <h2 class="section-title"
+                        style="font-size: 1.5rem; margin-bottom: 2rem; text-transform: uppercase;">¿HABLAMOS? AGENDA TU
+                        SESIÓN</h2>
+                    <div style="margin-top: auto;">
+                        <a href="#auditoria" class="btn btn-primary btn-large"
+                            style="padding: 15px 30px; line-height: 1.5; font-size: 1.1rem; border: none; font-weight: 700; display: inline-block;">Agendar
+                            Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>David Incertis © 2026. Ingeniero de Automatizaciones Digitales.</p>
+                <a href="legal.html" class="legal-link">Aviso Legal y Privacidad</a>
+            </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Solicitar Auditoría</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Déjame tus datos y te contactaré en menos de
+                24h.</p>
+
+            <!-- Mensaje de éxito -->
+            <div id="form-success" style="display:none; text-align:center; padding: 2rem 0;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                <h3 style="margin-bottom: 0.75rem;">¡Solicitud enviada!</h3>
+                <p style="color: var(--color-text-dim);">Te contactaré en menos de 24h. Revisa también tu bandeja de
+                    entrada.</p>
+            </div>
+
+            <!-- Mensaje de error -->
+            <div id="form-error"
+                style="display:none; background:#ff4c3820; border:1px solid #ff4c38; border-radius:6px; padding:1rem; margin-bottom:1rem; color:#ff4c38; font-size:0.9rem;">
+                Ha ocurrido un error al enviar. Por favor, inténtalo de nuevo.
+            </div>
+
+            <form id="audit-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Cuéntame brevemente cuáles son tus necesidades</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="presupuesto">Tu presupuesto</label>
+                    <select id="presupuesto" name="presupuesto" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="300-1000">De 300 € a 1.000 €</option>
+                        <option value="1000-3000">De 1.000 € a 3.000 €</option>
+                        <option value="3000+">Más de 3.000 €</option>
+                    </select>
+                </div>
+                <div class="legal-check">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        He leído y acepto la <a href="legal.html" target="_blank">Política de Privacidad</a>
+                    </label>
+                </div>
+                <p class="legal-small-print">
+                    <small>
+                        <strong>Responsable:</strong> David Incertis | <strong>Finalidad:</strong> Gestión del contacto.
+                        | <strong>Legitimación:</strong> Tu consentimiento.
+                    </small>
+                </p>
+                <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Enviar
+                    Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('audit-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            var btn = document.getElementById('submit-btn');
+            var errorDiv = document.getElementById('form-error');
+            var successDiv = document.getElementById('form-success');
+            var form = document.getElementById('audit-form');
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            errorDiv.style.display = 'none';
+            var data = {
+                Nombre: document.getElementById('name').value,
+                Apellidos: document.getElementById('apellidos').value,
+                Email: document.getElementById('email').value,
+                Necesidad: document.getElementById('message').value,
+                Presupuesto: document.getElementById('presupuesto').value
+            };
+            try {
+                await fetch('https://n8n.davidincertis.com/webhook/248f2d00-133a-4043-a86b-8257de512396', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                    mode: 'no-cors'
+                });
+                form.style.display = 'none';
+                successDiv.style.display = 'block';
+            } catch (err) {
+                errorDiv.style.display = 'block';
+                btn.textContent = 'Enviar Solicitud';
+                btn.disabled = false;
+            }
+        });
+    </script>
+
+    <!-- Audit Details Modal -->
+    <div id="audit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" data-target="audit-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Auditoría de Flujos de Trabajo &
+                Hoja de Ruta</h2>
+
+            <p style="margin-bottom: 1rem; font-weight: 600; color: var(--color-accent-secondary);">"Antes de tocar
+                nada, vamos a ver cuánto tiempo y recursos estás perdiendo por no automatizar tus procesos."</p>
+
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Se trata de una sesión intensiva donde
+                analizaré cómo trabajas hoy para detectar "agujeros negros" de tiempo y recursos, tanto humanos, como económicos.</p>
+
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Te entregaré un informe en PDF con el diagrama
+                de tus procesos actuales vs. cómo quedarían automatizados, y una estimación del ahorro anual.</p>
+
+            <p
+                style="margin-bottom: 1.5rem; font-style: italic; border-left: 3px solid var(--color-accent-primary); padding-left: 10px;">
+                Este diagnóstico es gratuito si contratas la implementación.</p>
+
+            <button class="btn btn-primary"
+                onclick="window.location.href='#auditoria'; document.getElementById('audit-modal').style.display='none'; openModal();">Solicitar
+                Ahora</button>
+        </div>
+    </div>
+
+    <!-- Business OS Modal -->
+    <div id="brain-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" data-target="brain-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Centralización y
+                Automatización de Procesos</h2>
+
+            <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--color-accent-secondary);">"Deja de ser
+                el secretario de tu propia empresa. Automatizo los procesos que trabajan por ti."</p>
+
+            <h4 style="margin-bottom: 1rem; color: var(--color-text-main);">¿Qué puede incluir?:</h4>
+            <ul
+                style="list-style-type: disc; padding-left: 20px; text-align: left; margin-bottom: 1.5rem; color: var(--color-text-dim);">
+                <li style="margin-bottom: 0.5rem;">Diseño de base de datos relacional (Clientes, Pedidos, Stock,
+                    Facturas) con automatizaciones internas y externas.</li>
+                <li style="margin-bottom: 0.5rem;">Automatizaciones clave: registro automático de clientes y leads, cribado de clientes según criterios, 
+                    envío automatizado de recordatorios, newsletters. promociones, seguimiento de satisfacción del cliente, 
+                    agendación de citas automáticas, gestión automática de no-shows y cancelaciones, etc.</li>
+                <li style="margin-bottom: 0.5rem;">Generación, registro y envío automático de informes, documentos, reportes, etc.</li>
+                <li style="margin-bottom: 0.5rem;">Escaneo automático de tu bandeja de entrada para registrar leads o asuntos importantes que se han podido traspapelar.
+                <li style="margin-bottom: 0.5rem;">Respuestas automáticas a e-mails o formularios con registro de los datos captados y notificación automática.</li>
+
+                </li>
+            </ul>
+
+            <button class="btn btn-primary"
+                onclick="window.location.href='#auditoria'; document.getElementById('brain-modal').style.display='none'; openModal();">Solicitar
+                Ahora</button>
+        </div>
+    </div>
+
+    <!-- Consulting Modal -->
+    <div id="consulting-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" data-target="consulting-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Agentes de IA dedicados a ti 24 horas al día durante todo el año</h2>
+
+            <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--color-accent-secondary);">Configuración e implementación de chatbots de atención 
+                al cliente, soporte técnico, etc., para tu página web o Whatsapp</p>
+
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Agentes "tutores" para resolver dudas o hacer de asistente técnico para el personal de 
+                tu empresa o equipo de trabajo</p>
+
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Agentes de venta que captan, clasifican y registran leads automáticamente.</p>
+
+            <button class="btn btn-primary"
+                onclick="window.location.href='#auditoria'; document.getElementById('consulting-modal').style.display='none'; openModal();">Solicitar
+                Ahora</button>
+        </div>
+    </div>
+
+    <!-- Health Test Modal -->
+    <div id="test-modal" class="modal">
+        <div class="modal-content" style="max-width: 650px;">
+            <span class="close-modal" data-target="test-modal">&times;</span>
+            <div id="test-selection" style="text-align: center; padding: 2rem 1rem;">
+                <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Test de Salud Operativa</h2>
+                <p style="margin-bottom: 3rem; color: var(--color-text-dim);">¿Qué tipo de negocio tienes?</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn btn-secondary btn-large" onclick="showFreelanceTest()"
+                        style="flex: 1; min-width: 200px; padding: 12px 5px; font-size: 0.9rem; white-space: normal; line-height: 1.3; display: flex; align-items: center; justify-content: center; text-align: center;">Soy
+                        autónomo/freelance</button>
+                    <button class="btn btn-primary btn-large" onclick="showPymeTest()"
+                        style="flex: 1; min-width: 200px; padding: 12px 5px; font-size: 0.9rem; white-space: normal; line-height: 1.3; display: flex; align-items: center; justify-content: center; text-align: center;">Soy
+                        PYME</button>
+                </div>
+            </div>
+
+            <div id="test-pyme" style="display: none;">
+                <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Test de Salud Operativa (PYME)
+                </h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-dim);">Marca con un tick las situaciones que se
+                    den actualmente en la realidad de tu empresa:</p>
+
+                <form id="health-test-form-pyme">
+                    <div class="test-checkboxes" style="text-align: left; margin-bottom: 2rem;">
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Sigo usando hojas de Excel para
+                                gestionar procesos que deberían estar automatizados de forma centralizada.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">He perdido la versión final de algún
+                                documento importante últimamente por errores de guardado.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Me cuesta tener visibilidad en tiempo
+                                real del estado de los datos clave (ventas, stock, clientes).</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Yo o mi equipo pasamos mucho tiempo
+                                copiando y pegando datos manualmente entre herramientas.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">El funcionamiento de la operativa
+                                tiene una dependencia absoluta de una o dos personas clave.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Dedico gran parte de mi semana a
+                                apagar fuegos administrativos en vez de hacer crecer mi negocio.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Suelen producirse errores humanos que
+                                nos cuestan tiempo, dinero o molestias a los clientes.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Siento que la información de la
+                                empresa está aislada y desconectada entre diferentes departamentos.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Resulta un suplicio incorporar nuevos
+                                miembros al equipo por falta de documentación de procesos.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-pyme"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);">Tengo la sensación de que mi empresa y
+                                yo podríamos lograr y escalar mucho más si no tuviéramos tanto caos.</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-large" onclick="calculateResults('pyme')"
+                        style="width: 100%;">VER EL RESULTADO DE MI TEST</button>
+                    <button type="button" class="btn" onclick="resetTest()"
+                        style="width: 100%; background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; margin-top: 10px;">Volver</button>
+                </form>
+            </div>
+
+            <div id="test-freelance" style="display: none;">
+                <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1rem;">Test de Salud Operativa
+                    (Autónomo/Freelance)</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-dim);">Marca con un tick las situaciones que se
+                    den actualmente en la realidad de tu negocio:</p>
+
+                <form id="health-test-form-freelance">
+                    <div class="test-checkboxes" style="text-align: left; margin-bottom: 2rem;">
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Facturación manual:</strong>
+                                Llegas a final de mes y pierdes horas creando o duplicando facturas a mano en Word o
+                                Excel para enviarlas una a una.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Ping-pong de
+                                    reuniones:</strong> Intercambias 4 o 5 emails o mensajes de WhatsApp con un cliente
+                                potencial solo para cuadrar una fecha y hora para reuniros.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Falta de seguimiento
+                                    (Leads):</strong> Apuntas los contactos interesantes en libretas, post-its o en tu
+                                cabeza, y a veces pierdes oportunidades de venta por olvidarte de escribirles de
+                                nuevo.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Onboarding
+                                    repetitivo:</strong> Cada vez que entra un cliente nuevo, redactas desde cero el
+                                mismo email pidiéndole los mismos datos, accesos o documentos para empezar a
+                                trabajar.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>El cobrador del frac:</strong>
+                                Te da apuro (o directamente se te olvida) reclamar facturas vencidas porque tienes que
+                                revisar el banco manualmente y escribir tú el mensaje.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Descontrol de
+                                    rentabilidad:</strong> Cobras por proyecto cerrado, pero realmente no sabes con
+                                exactitud cuántas horas le dedicas ni si ese cliente te sale a cuenta o te está costando
+                                dinero.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Síndrome de la "Caja de
+                                    Zapatos":</strong> Tu gestión de tickets y facturas de gastos es una carpeta caótica
+                                (física o en el escritorio del PC) que te da dolores de cabeza cada trimestre al
+                                enviarla a la gestoría.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Presupuestos desde
+                                    cero:</strong> Cada vez que te piden un presupuesto o propuesta, abres un documento
+                                en blanco o te peleas con el formato de uno antiguo, en lugar de generarlo
+                                automáticamente.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>Multicanalidad
+                                    caótica:</strong> Tus clientes te piden cosas por WhatsApp, email, LinkedIn o
+                                audios, y no tienes una base de datos centralizada que convierta esas peticiones en
+                                tareas.</span>
+                        </label>
+                        <label
+                            style="display: flex; align-items: flex-start; margin-bottom: 1rem; cursor: pointer; padding: 10px; background: var(--color-bg-darker); border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                            onmouseout="this.style.background='var(--color-bg-darker)'">
+                            <input type="checkbox" class="test-check-freelance"
+                                style="margin-top: 4px; margin-right: 15px; width: 1.2rem; height: 1.2rem; cursor: pointer;">
+                            <span style="flex: 1; color: var(--color-text-main);"><strong>El techo de cristal:</strong>
+                                Sientes que has tocado tu límite de ingresos; la única forma de ganar más dinero es
+                                echarle más horas, porque el 100% de la gestión administrativa depende de ti.</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-large" onclick="calculateResults('freelance')"
+                        style="width: 100%;">VER EL RESULTADO DE MI TEST</button>
+                    <button type="button" class="btn" onclick="resetTest()"
+                        style="width: 100%; background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; margin-top: 10px;">Volver</button>
+                </form>
+            </div>
+
+            <div id="test-results" style="display: none; text-align: center; padding: 2rem 1rem;">
+                <div id="result-icon" style="font-size: 4rem; margin-bottom: 1rem;"></div>
+                <h3 id="result-title" style="margin-bottom: 1.5rem; font-size: 1.8rem;"></h3>
+                <p id="result-message"
+                    style="margin-bottom: 2.5rem; color: var(--color-text-dim); line-height: 1.6; font-size: 1.1rem;">
+                </p>
+                <button id="result-action-btn" class="btn btn-primary btn-large"
+                    style="width: 100%; max-width: 300px; margin-bottom: 1rem;">Agendar reunión gratuita</button><br>
+                <button class="btn"
+                    style="background: transparent; color: var(--color-text-dim); border: none; text-decoration: underline; cursor: pointer;"
+                    onclick="resetTest()">Repetir test</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Client Modals -->
+    <div id="modal-chou" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;"><a href="https://www.youtube.com/@GabrielIncertis" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='inherit'">El Chou de Gabriel Incertis</a></h2>
+            <h3 class="section-title" style="font-size: 1.2rem; margin-bottom: 1rem;">(Canal de Youtube)</h3>
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Este canal de Youtube tiene más de 75.000 subscriptores y más de 1.100 vídeos. El reto ha 
+                sido coneguir la automatización completa de la creación y publicación en RSS de clips de video en formato shorts y stories a partir de los videos que 
+                publica semanalmente en su canal.</p>
+            <ul style="list-style-type: disc; padding-left: 20px; color: var(--color-text-main); margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">Cada domingo se ejecuta la automatización: La IA selecciona 15 clips de cada uno de los dos últimos vídeos 
+                    publicados esa semana y corta los 10 más virales según un criterio establecido y con el formato adecuado.</li>
+                <li style="margin-bottom: 0.5rem;">La IA añade un título "click-bite" y una descripción de forma automática.</li>
+                <li style="margin-bottom: 0.5rem;">Los clips se descargarn en una carpeta de Drive y se envia automáticamente al cliente un email para que revise los 10 clips.</li>
+                <li style="margin-bottom: 0.5rem;">El cliente revisa los clips, borra los tres que menos le interesen y aprieta un botón de confirmación en su email.</li>
+                <li style="margin-bottom: 0.5rem;">La IA recibe entonces la instrucción y programa automáticamente los clips para subirse en Youtube, Instagram y 
+                    Facebook a razón de un clip diario de forma que el usuario cubre automáticamente todas sus RSS a diario.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-workshop" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;"><a href="https://www.coworkingcampanar.com/" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='inherit'">The Workshop</a></h2> 
+            <h3 class="section-title" style="font-size: 1.2rem; margin-bottom: 1rem;">Coworking Campanar</h3>
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Creación de base de datos automática de clientes y de facturas a partir de escaneo y extracción automatizada de datos desde documentos en PDF o formato imagen.</p>
+            <ul style="list-style-type: disc; padding-left: 20px; color: var(--color-text-main); margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">El usuario arrastra facturas o contratos a sus carpetas respectivas en Drive o Dropbox.</li>
+                <li style="margin-bottom: 0.5rem;">Una vez al día la automatización escanea los archivos, extrae los datos y los registra en sus respectivas hojas de Google Sheets o en base de datos.</li>
+                <li style="margin-bottom: 0.5rem;">Se envía aviso vía email al usuario con información de los archivos procesados.</li>
+                <li style="margin-bottom: 0.5rem;">Automáticamente se crea un resgistro de clientes a partir del cual se pueden automatizar envíos de promociones, newsletters,...</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-isabel" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;"><a href="https://isabelcobo.com/" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='inherit'">Isabel Cobo</a></h2>
+            <h3 class="section-title" style="font-size: 1.2rem; margin-bottom: 1rem;">Real Estate Hunter</h3>
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Gestión automatizada de respuesta a potenciales clientes a través de formulario web con generación de cita automatizada y aviso a través de WhatsApp.</p>
+            <ul style="list-style-type: disc; padding-left: 20px; color: var(--color-text-main); margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">El lead rellena el formulario web y le da a enviar.</li>
+                <li style="margin-bottom: 0.5rem;">Los datos del lead y de su consulta se registran automáticamente en una base de datos.</li>
+                <li style="margin-bottom: 0.5rem;">La IA responde por Isabel al cliente acerca de su consulta y le sugiere agendar una reunión.</li>
+                <li style="margin-bottom: 0.5rem;">El lead selecciona en el calendario una fecha y hora disponible y recibe un email de confirmación.</li>
+                <li style="margin-bottom: 0.5rem;">La fecha y hora de la reunión quedan registradas en la base de datos e Isabel recibe un aviso acerca de la reunión por Whatsapp.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-doctor" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;"><a href="https://doctorcollector.com/" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='inherit'">Doctor Collector</a></h2>
+            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Empresa española de menos de 10 trabajadores que desde 2017 diseña, fabrica y exporta 
+                artículos de coleccionismoo basados en películas, series y videojuegos icónicos por todo el mundo, con almacenes en China, España y Estados Unidos 
+                y manejando cientos de referencias anuales.</p>
+            <ul style="list-style-type: disc; padding-left: 20px; color: var(--color-text-main); margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">Configuración de chatbot de atención a clientes conectado con Shopify.</li>
+                <li style="margin-bottom: 0.5rem;">Generación de informes consolidados de costes mensuales de producción en China categorizado por tipo de cargo y proyecto.</li>
+                <li style="margin-bottom: 0.5rem;">Avisos automatizados cuando la cuenta de agente de exportación alcanza un umbral mínimo.</li>
+                <li style="margin-bottom: 0.5rem;">Automatización de generación de órdenes de compra en Zoho a partir de facturas en PDF descargadas automáticamente desde intranet con conversión de moneda (USD-EUR).</li>
+                <li style="margin-bottom: 0.5rem;">Actualización automática de los costes de producción a partir de un excel descargado de una intranet en China con generación de informes de estado.</li>
+                <li style="margin-bottom: 0.5rem;">Creación automática de carpetas en Dropbox de envíos efectuados desde China con descarga automática de documentos.</li>
+                <li style="margin-bottom: 0.5rem;">Extracción de datos de documentos de aduanas (Bill of Lading) y carga en base de datos con generación de avisos sobre el estado del envío.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-agua" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;"><a href="https://aguaecosocial.com/" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='inherit'">Agua Ecosocial</a></h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Ernesto Cidad es un Ingeniero Químico que asesora sobre tratamientos de agua para empresas y particulares. Actualmente le estoy desarrollando un bot para su web que ayuda a los clientes a elegir el mejor sistema de filtración o tratamiento de agua para su caso. Este bot también sirve para captar leads y registrar sus datos.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Chatbot n8n -->
+    <link href="styles/n8n-chat.css" rel="stylesheet" />
+    <style>
+        :root {
+            --chat--color--primary: #ff6b6c;
+            --chat--color--primary-shade-50: #ff6b6c;
+            --chat--color--primary--shade-100: #ff6b6c;
+        }
+    </style>
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.davidincertis.com/webhook/68f1988c-a67a-453f-b68f-75ec88c05cd1/chat',
+            showWelcomeScreen: true,
+            initialMessages: [
+                'Hola, ¿qué tal?',
+                'Me llamo Eva, ¿En qué te puedo ayudar?'
+            ],
+            i18n: {
+                en: {
+                    title: '¡Hola! 👋',
+                    subtitle: 'Empieza a chatear. Estamos aquí para ayudarte.',
+                    footer: '',
+                    getStarted: 'Nuevo chat',
+                    inputPlaceholder: 'Escribe tu pregunta...'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

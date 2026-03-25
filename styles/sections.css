@@ -1,0 +1,373 @@
+/* Hero Section */
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.15);
+    background-image: radial-gradient(circle at 10% 20%, rgba(78, 205, 196, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 107, 107, 0.15) 0%, transparent 20%);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-accent-secondary);
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    /* Going for centered layout for high impact as option A in prompt */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pain Points */
+.pain-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    /* Remove default padding if needed, or keep it */
+    overflow: hidden;
+    /* Ensure image doesn't overflow rounded corners if card has them */
+}
+
+.pain-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    /* Optional: slight rounding for images */
+}
+
+.pain-card p {
+    padding: 0 var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Value Prop */
+.flow-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    flex-wrap: wrap;
+}
+
+.highlight-box {
+    background: rgba(78, 205, 196, 0.1);
+    color: var(--color-accent-secondary);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.arrow {
+    color: var(--color-text-dim);
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.benefit-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Authority */
+.alt-bg {
+    background-color: var(--color-bg-darker);
+}
+
+.authority-grid {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.authority-text-col {
+    flex: 1;
+    text-align: left;
+}
+
+.authority-content {
+    /* Fallback or remove if unused */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.authority-img-col {
+    flex: 0 0 350px;
+    /* Fixed width for image column */
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: flex-start;
+    /* Align start to match text left alignment */
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items start */
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-accent-secondary);
+    font-family: var(--font-heading);
+}
+
+.stat-label {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Services */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    /* Ensure cards match height in grid */
+}
+
+.service-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-secondary);
+}
+
+.box-highlight {
+    border-color: var(--color-accent-primary);
+    background: linear-gradient(135deg, var(--color-bg-darker) 0%, rgba(255, 107, 107, 0.05) 100%);
+}
+
+.service-tag {
+    color: var(--color-text-muted);
+}
+
+.click-more {
+    font-size: 0.85rem;
+    color: var(--color-accent-secondary);
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .click-more {
+    opacity: 1;
+}
+
+/* Footer CTA */
+.footer-cta {
+    background: linear-gradient(0deg, var(--color-bg-darker) 0%, var(--color-bg-primary) 100%);
+}
+
+.display-title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.lead-text {
+    color: var(--color-accent-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer {
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Vertical alignment */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.legal-link {
+    color: var(--color-text-dim);
+    font-size: inherit;
+    text-decoration: none;
+    margin-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: var(--color-text-main);
+    text-decoration: underline;
+}
+/* Toolkit Marquee */
+.toolkit-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    padding: 1.2rem 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.toolkit-marquee {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    animation: marquee 40s linear infinite;
+    padding-left: 6rem; /* Match the gap so the loop doesn't jump */
+}
+.toolkit-marquee img {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.3s ease;
+}
+.toolkit-marquee img:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+/* Adjust sizes for logos with built-in white space */
+.toolkit-marquee img[alt="AI Studio"],
+.toolkit-marquee img[alt="Antigravity"] {
+    height: 100px;
+    max-width: 400px;
+}
+
+.toolkit-marquee img[alt="Make"],
+.toolkit-marquee img[alt="Airtable"],
+.toolkit-marquee img[alt="JavaScript"] {
+    height: 75px;
+    max-width: 300px;
+}
+
+.toolkit-marquee img[alt="n8n"] {
+    height: 65px;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
