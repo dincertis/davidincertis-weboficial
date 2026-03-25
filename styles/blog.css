@@ -513,3 +513,17 @@ body {
         padding-left: 0.8rem;
     }
 }
+
+/* --- FIX DEL CONTENEDOR PRINCIPAL --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Asegurar que las imágenes no desborden nunca */
+img {
+    max-width: 100%;
+    height: auto;
+}
