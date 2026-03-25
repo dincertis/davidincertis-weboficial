@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Automatización | David Incertis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { background-color: #0a192f; margin: 0; padding: 0; color: #E6F1FF; font-family: 'Inter', sans-serif; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; box-sizing: border-box; }
+        img { max-width: 100%; height: auto; }
+        a { text-decoration: none; }
+        
+        /* Header */
+        .blog-header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .blog-header-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+        .blog-brand__name { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #ffffff; font-size: 1.2rem; display: block; }
+        .blog-brand__tag { font-size: 0.85rem; color: #a8b2d1; }
+        .blog-nav { display: flex; gap: 15px; align-items: center; }
+        .blog-nav__link { color: #E6F1FF; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
+        .blog-nav__link--active { color: #4ECDC4; }
+        .btn-primary { background: #FF6B6B; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
+        
+        /* Hero */
+        .blog-hero { padding: 4rem 0; text-align: center; }
+        .blog-hero-title { font-family: 'Montserrat', sans-serif; font-size: 3rem; color: #fff; margin-bottom: 1rem; }
+        .blog-hero-kicker { color: #4ECDC4; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
+        
+        /* Grid */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem 0; }
+        .blog-card { background: rgba(2, 8, 18, 0.55); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; overflow: hidden; }
+        .blog-card__media { aspect-ratio: 16/9; display: block; overflow: hidden; background: #112240; }
+        .blog-card__media img { width: 100%; height: 100%; object-fit: cover; }
+        .blog-card__body { padding: 1.5rem; }
+        .blog-card__meta { color: #4ECDC4; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .blog-card__title a { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: bold; }
+        .blog-card__cta { color: #4ECDC4; font-size: 0.9rem; font-weight: bold; display: inline-block; margin-top: 1rem; }
+        
+        /* Footer */
+        .blog-footer { padding: 2rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.06); margin-top: 4rem; }
+        .blog-footer-text { color: #a8b2d1; }
+    </style>
+</head>
+<body>
+    <header class="blog-header">
+        <div class="container blog-header-inner">
+            <a href="/" class="blog-brand">
+                <span class="blog-brand__name">David Incertis</span>
+                <span class="blog-brand__tag">Automatizaciones & IA</span>
+            </a>
+            <nav class="blog-nav">
+                <a class="blog-nav__link" href="/">Inicio</a>
+                <a class="blog-nav__link blog-nav__link--active" href="/blog/">Blog</a>
+                <a class="btn-primary" href="/#auditoria">Agendar reunión</a>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        <section class="blog-hero">
+            <p class="blog-hero-kicker">Insights prácticos</p>
+            <h1 class="blog-hero-title">Blog de Automatización</h1>
+            <p>Estrategia y tecnología para escalar con sistemas.</p>
+        </section>
+
+        <section>
+            <h2>Últimos artículos</h2>
+            <div class="blog-grid">
+<article class="blog-card" role="listitem">
+  <a class="blog-card__media" href="https://davidincertis.com/blog/2026-03-25-reclMZ2DF3lMxB3En.html">
+    <img src="/blog/imagenes/2026-03-25-reclMZ2DF3lMxB3En.jpg" alt="Qué es la automatización de procesos y por qué tu empresa la necesita en 2026" loading="lazy">
+  </a>
+  <div class="blog-card__body">
+    <div class="blog-card__meta"><time>25/03/2026</time></div>
+    <h3 class="blog-card__title"><a href="https://davidincertis.com/blog/2026-03-25-reclMZ2DF3lMxB3En.html">Qué es la automatización de procesos y por qué tu empresa la necesita en 2026</a></h3>
+    <div class="blog-card__footer"><a class="blog-card__cta" href="https://davidincertis.com/blog/2026-03-25-reclMZ2DF3lMxB3En.html">Leer más</a></div>
+  </div>
+</article>
+<article class="blog-card blog-card--placeholder" role="listitem">
+  <div class="blog-card__media blog-card__media--placeholder"></div>
+  <div class="blog-card__body">
+    <div class="blog-card__meta"><span>Próximamente</span></div>
+    <h3 class="blog-card__title">n8n vs Make: cuál elegir para automatizar tu negocio</h3>
+    <div class="blog-card__footer"><span class="blog-card__cta blog-card__cta--disabled">Leer más</span></div>
+  </div>
+</article>
+<article class="blog-card blog-card--placeholder" role="listitem">
+  <div class="blog-card__media blog-card__media--placeholder"></div>
+  <div class="blog-card__body">
+    <div class="blog-card__meta"><span>Próximamente</span></div>
+    <h3 class="blog-card__title">Automatización sin caos: checklist de implementación en 30 días</h3>
+    <div class="blog-card__footer"><span class="blog-card__cta blog-card__cta--disabled">Leer más</span></div>
+  </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="blog-footer">
+        <div class="container">
+            <p class="blog-footer-text">David Incertis © 2026. Ingeniero de Automatizaciones.</p>
+        </div>
+    </footer>
+</body>
+</html>
