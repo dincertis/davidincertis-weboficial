@@ -60,10 +60,12 @@ David Incertis © 2025. Ingeniero de Automatizaciones Digitales
                     <a href="blog/index.html" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">BLOG</a>
                 </div>
                 
+                <a href="#auditoria" class="btn btn-primary header-cta" style="white-space: nowrap;">Agendar reunión</a>
+
                 <!-- Mobile Menu -->
-                <div class="mobile-menu dropdown" style="display: none; margin-right: 15px; position: relative;">
-                    <button class="dropbtn" style="font-size: 1rem; display: flex; align-items: center; gap: 5px;">MENÚ <span style="font-size: 0.7em;">▼</span></button>
-                    <div class="dropdown-content" style="min-width: 200px; left: auto; right: 0; transform: none;">
+                <div class="mobile-menu dropdown" style="display: none; margin-left: 15px; position: relative;">
+                    <button class="dropbtn" onclick="toggleMobileMenu(event)" style="font-size: 1rem; display: flex; align-items: center; gap: 5px;">MENÚ <span style="font-size: 0.7em;">▼</span></button>
+                    <div id="mobileDropdown" class="dropdown-content" style="min-width: 200px; left: auto; right: 0; transform: none;">
                         <a href="#services">Servicios</a>
                         <a href="#clientes">Casos de Éxito</a>
                         <a href="clinicas.html">Clínicas de Salud & Bienestar</a>
@@ -71,8 +73,6 @@ David Incertis © 2025. Ingeniero de Automatizaciones Digitales
                         <a href="blog/index.html">Blog</a>
                     </div>
                 </div>
-
-                <a href="#auditoria" class="btn btn-primary header-cta" style="white-space: nowrap;">Agendar reunión</a>
             </nav>
         </div>
     </header>
@@ -893,6 +893,19 @@ David Incertis © 2025. Ingeniero de Automatizaciones Digitales
                     inputPlaceholder: 'Escribe tu pregunta...'
                 }
             }
+        });
+    </script>
+    
+    <script>
+        function toggleMobileMenu(e) {
+            e.stopPropagation();
+            const menu = document.getElementById('mobileDropdown');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+        // Cierra el menú si se toca fuera
+        document.addEventListener('click', function() {
+            const menu = document.getElementById('mobileDropdown');
+            if (menu) menu.style.display = 'none';
         });
     </script>
 </body>
