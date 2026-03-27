@@ -24,7 +24,6 @@
     .hero-section {
         padding-top: 180px;
         padding-bottom: 4rem !important;
-        /* Increased to account for stacked header + button */
     }
 
     .grid-4,
@@ -35,16 +34,6 @@
 
     /* Authority Grid Mobile */
     .authority-grid {
-        flex-direction: column-reverse;
-        /* Stack image below text usually, or reverse to have image on top? Let's try column-reverse to put image above on mobile if defined? No, flex-direction:column puts items top-to-bottom. If we want image first, we'd need to reorder or put image first in HTML. 
-        Actually, usually image is secondary to headline. Let's stack vertically.
-        Wait, flex-direction: column-reverse puts the last item first? No, last item at top.
-        HTML order: Text Col (1), Image Col (2).
-        column: Text then Image.
-        column-reverse: Image then Text.
-        Let's try column-reverse to showcase the person first? Or Text first? Let's check user preference implicitly.
-        Let's stick to standard flow: Text then Image on mobile. So just flex-direction: column.
-        */
         flex-direction: column;
         gap: 2rem;
         text-align: center;
@@ -68,14 +57,12 @@
     .authority-img-col {
         width: 100%;
         max-width: 320px;
-        /* Limit width */
         margin: 0 auto;
     }
 
     /* Test selection spacing */
     .test-selection-buttons {
         gap: 1.5rem !important;
-        /* Increase gap between the two buttons */
     }
 
     /* Small adjustments */
@@ -101,10 +88,15 @@
         gap: 1rem !important;
         text-align: center !important;
     }
-     /* Fix menú móvil */
-     .mobile-menu .dropdown-content {
-        left: auto;
-        right: 0;
-        transform: none;
+
+    /* Fix menú móvil: anclar desplegable a la derecha */
+    .mobile-menu {
+        position: relative !important;
+    }
+
+    .mobile-menu .dropdown-content {
+        left: auto !important;
+        right: 0 !important;
+        transform: none !important;
     }
 }
