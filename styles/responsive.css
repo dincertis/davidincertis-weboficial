@@ -15,7 +15,7 @@
     .header-nav { justify-content: center !important; gap: 10px; }
 
     .hero-title {
-        font-size: 2.2rem !important;
+        font-size: 1.75rem !important;
         word-wrap: break-word;
         max-width: 100%;
         hyphens: auto;
@@ -100,5 +100,11 @@
         flex-direction: column !important;
         gap: 1rem !important;
         text-align: center !important;
+    }
+     /* Fix menú móvil */
+     .mobile-menu .dropdown-content {
+        left: auto;
+        right: 0;
+        transform: none;
     }
 }
