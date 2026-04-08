@@ -97,13 +97,15 @@ David Incertis © 2025. Ingeniero de Automatizaciones Digitales
             <div class="container hero-container">
                 <div class="hero-content" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; max-width: 1200px; margin: 0 auto; text-align: left; flex-wrap: wrap-reverse;">
                     <div class="hero-text-col" style="flex: 1.5; min-width: 300px; max-width: 700px;">
-                        <h1 class="hero-title" style="text-align: left; margin-bottom: 1.5rem; line-height: 1.05;">Ingeniero de <br>Automatizaciones <br>e Inteligencia Artificial.</h1>
-                        <p class="hero-subtitle" style="text-align: left; font-size: 1.5rem; color: var(--color-text-muted); margin-bottom: 2.5rem; margin-left: 0; max-width: 100%;">Experto en entornos de alta complejidad.</p>
-                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600; color: white; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 8px; display: inline-block; border: 1px solid rgba(255,255,255,0.1); text-shadow: 0 2px 4px rgba(0,0,0,0.5); backdrop-filter: blur(4px);">EVALÚA EN 3 MINUTOS EL ESTADO DE SALUD DE TU NEGOCIO</p>
+                        <h1 class="hero-title" style="text-align: left;">Ingeniero de <br>Automatizaciones <br>e Inteligencia Artificial.</h1>
+                        <p class="hero-subtitle" style="text-align: left; font-size: 1.5rem; color: var(--color-text-muted); margin-left: 0; max-width: 100%;">Experto en entornos de alta complejidad.</p>
+                        <p class="hero-evalua-text" style="font-size: 1.1rem; font-weight: 600; color: white; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 8px; display: inline-block; border: 1px solid rgba(255,255,255,0.1); text-shadow: 0 2px 4px rgba(0,0,0,0.5); backdrop-filter: blur(4px);">EVALÚA EN 3 MINUTOS EL ESTADO DE SALUD DE TU NEGOCIO</p>
                         <button class="btn btn-secondary btn-large" style="background-color: var(--color-accent-secondary); color: var(--color-bg-dark); font-weight: 700; border: none; padding: 15px 30px; font-size: 1.1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openTestModal()">HAZ EL TEST</button>
                     </div>
                     <div class="hero-img-col" style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center;">
-                        <img src="Imagenes/David.jpg" alt="David Incertis" style="width: 100%; max-width: 550px; aspect-ratio: 4/5; object-fit: cover; object-position: right center; border-radius: var(--border-radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.1);">
+                        <div class="hero-photo-container">
+                            <img src="Imagenes/David.jpg" alt="David Incertis" class="hero-photo">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,14 +168,17 @@ David Incertis © 2025. Ingeniero de Automatizaciones Digitales
             <div class="container" style="margin-top: 4rem;">
                 <h4 class="section-title center-text" style="font-size: 1.25rem; margin-bottom: 2rem; color: var(--color-text-dim);">Otros servicios</h4>
                 <div class="grid-3">
-                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; cursor: default;">
-                        <h3 style="margin-bottom: 0; font-size: 1.1rem;">Diseño de páginas web</h3>
+                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; color: var(--color-accent-secondary);">Diseño de páginas web</h3>
+                        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin: 0;">Páginas web altamente personalizadas, prácticas y optimizadas para SEO.</p>
                     </div>
-                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; cursor: default;">
-                        <h3 style="margin-bottom: 0; font-size: 1.1rem;">Desarrollo Frontend</h3>
+                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; color: var(--color-accent-secondary);">Desarrollo Frontend</h3>
+                        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin: 0;">Diseño interfaces responsivas, accesibles y rápidas para garantizar una experiencia de usuario fluida y atractiva.</p>
                     </div>
-                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; cursor: default;">
-                        <h3 style="margin-bottom: 0; font-size: 1.1rem;">Diseño gráfico</h3>
+                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; color: var(--color-accent-secondary);">Diseño gráfico</h3>
+                        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin: 0;">Diseño de marca, imagen corporativa, logos y elementos atractivos para tu web o redes sociales.</p>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
 
+    // Hero Text Parallax Effect
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        // Limit progress between 0 and 1 over 500px of scroll
+        const progress = Math.min(scrollY / 500, 1);
+        document.documentElement.style.setProperty('--hero-spread', progress);
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');

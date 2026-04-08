@@ -76,19 +76,60 @@
     /* Going for centered layout for high impact as option A in prompt */
 }
 
+.hero-text-col {
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-title {
     font-size: 3.5rem;
-    margin-bottom: var(--spacing-md);
-    line-height: 1.1;
+    margin-bottom: calc(var(--spacing-md) + var(--hero-spread, 0) * 3rem) !important;
+    line-height: calc(1.1 + var(--hero-spread, 0) * 0.8) !important;
+    transition: margin-bottom 0.1s ease-out, line-height 0.1s ease-out;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--color-text-muted);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: calc(var(--spacing-lg) + var(--hero-spread, 0) * 4rem) !important;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    transition: margin-bottom 0.1s ease-out;
+}
+
+.hero-evalua-text {
+    margin-bottom: calc(1.5rem + var(--hero-spread, 0) * 3rem) !important;
+    transition: margin-bottom 0.1s ease-out;
+}
+
+.hero-photo-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.1);
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 4/5;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-photo-container:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+    border-color: var(--color-accent-primary);
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    transition: transform 0.5s ease;
+}
+
+.hero-photo-container:hover .hero-photo {
+    transform: scale(1.05);
 }
 
 /* Pain Points */
@@ -215,8 +256,14 @@
 .stat-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* Align items start */
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+
+.stat-item:hover .stat-number {
+    color: var(--color-accent-primary);
+    transform: scale(1.15);
 }
 
 .stat-number {
@@ -224,6 +271,7 @@
     font-weight: 800;
     color: var(--color-accent-secondary);
     font-family: var(--font-heading);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .stat-label {
@@ -238,7 +286,12 @@
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    /* Ensure cards match height in grid */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(78, 205, 196, 0.4);
 }
 
 .service-card h3 {
