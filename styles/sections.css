@@ -424,3 +424,22 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+/* Clients Marquee */
+.clients-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    padding: 1.2rem 0;
+}
+.clients-marquee {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* Match the gap from HTML */
+    animation: marquee 30s linear infinite;
+    padding-left: 4rem; /* Match the gap so the loop doesn't jump */
+}
+.clients-marquee .client-logo {
+    flex-shrink: 0;
+}
