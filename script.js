@@ -122,18 +122,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Client Modals
     const clientChou = document.getElementById('client-chou');
     if (clientChou) setupModal('modal-chou', clientChou);
+    const clientChou2 = document.getElementById('client-chou-2');
+    if (clientChou2) setupModal('modal-chou', clientChou2);
 
     const clientWorkshop = document.getElementById('client-workshop');
     if (clientWorkshop) setupModal('modal-workshop', clientWorkshop);
+    const clientWorkshop2 = document.getElementById('client-workshop-2');
+    if (clientWorkshop2) setupModal('modal-workshop', clientWorkshop2);
 
     const clientIsabel = document.getElementById('client-isabel');
     if (clientIsabel) setupModal('modal-isabel', clientIsabel);
+    const clientIsabel2 = document.getElementById('client-isabel-2');
+    if (clientIsabel2) setupModal('modal-isabel', clientIsabel2);
 
     const clientDoctor = document.getElementById('client-doctor');
     if (clientDoctor) setupModal('modal-doctor', clientDoctor);
+    const clientDoctor2 = document.getElementById('client-doctor-2');
+    if (clientDoctor2) setupModal('modal-doctor', clientDoctor2);
 
     const clientAgua = document.getElementById('client-agua');
     if (clientAgua) setupModal('modal-agua', clientAgua);
+    const clientAgua2 = document.getElementById('client-agua-2');
+    if (clientAgua2) setupModal('modal-agua', clientAgua2);
+
+    const clientPoeme = document.getElementById('client-poeme');
+    if (clientPoeme) setupModal('modal-poeme', clientPoeme);
+    const clientPoeme2 = document.getElementById('client-poeme-2');
+    if (clientPoeme2) setupModal('modal-poeme', clientPoeme2);
 
     // Global Close on outside click
     // We attach ONE listener to window to handle ALL open modals
