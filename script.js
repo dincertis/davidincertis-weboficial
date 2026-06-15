@@ -150,6 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const clientPoeme2 = document.getElementById('client-poeme-2');
     if (clientPoeme2) setupModal('modal-poeme', clientPoeme2);
 
+    const clientCasaCobo = document.getElementById('client-casacobo');
+    if (clientCasaCobo) setupModal('modal-casacobo', clientCasaCobo);
+    const clientCasaCobo2 = document.getElementById('client-casacobo-2');
+    if (clientCasaCobo2) setupModal('modal-casacobo', clientCasaCobo2);
+
     // Global Close on outside click
     // We attach ONE listener to window to handle ALL open modals
     window.addEventListener('click', (event) => {
