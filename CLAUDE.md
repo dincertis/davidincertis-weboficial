@@ -33,7 +33,9 @@ y navega a `http://localhost:8000/index.html`.
 - `blog/index.html` — listado del blog.
 
 ### Blog
-Los posts (`blog/YYYY-MM-DD-recXXXXXXXXXXXXXX.html`) se generan externamente (el sufijo `rec...` son IDs de registro de Airtable) mediante un pipeline de automatización (Airtable + n8n), no se escriben a mano ni con un generador local. `blog/index.html` es una lista de tarjetas **mantenida a mano**: al añadir un post nuevo hay que insertar manualmente la tarjeta correspondiente (con URL absoluta `https://davidincertis.com/blog/...`) — no hay generación dinámica del índice.
+Los posts (`blog/YYYY-MM-DD-recXXXXXXXXXXXXXX.html`) y `blog/index.html` se generan y commitean automáticamente por el workflow n8n `Programación_Blog` (Airtable → IA → Replicate → GitHub); no se escriben ni se insertan tarjetas a mano. No edites `blog/index.html` a mano salvo para arreglar algo puntual — el próximo post publicado regenerará el archivo completo desde cero.
+
+Las imágenes de los posts se fuerzan a `.jpg` (`output_format` fijado en el nodo Replicate del workflow) porque la plantilla de tarjeta en `blog/index.html` asume esa extensión. Si el modelo de imagen cambia, hay que mantener esa consistencia o la portada del post no cargará imagen (pasó el 12/08/2026 al cambiar a un modelo que generaba `.webp`).
 
 ### CSS
 `styles/variables.css` define los design tokens (colores, tipografías) usados por el resto de hojas. `main.css`, `sections.css`, `responsive.css`, `modal.css` son compartidos entre páginas; `blog.css`, `clinicas.css`, `inmobiliarias.css` son específicos de sección. `n8n-chat.css` sobrescribe el estilo del widget de chat embebido (ver abajo).
@@ -44,12 +46,18 @@ Algunos `<link>`/`<script>` llevan un query string de versión (`styles/sections
 ### Chatbot n8n
 Varias páginas embeben el widget de chat de n8n vía CDN (`@n8n/chat`) apuntando a webhooks en `https://n8n.davidincertis.com/webhook/...`. Esos webhooks son infraestructura externa (no vive en este repo); si un webhook cambia hay que actualizar la URL en cada HTML donde esté embebido.
 
+### Backend de los workflows n8n (Baserow, no Google Sheets)
+Los workflows `Formulario_Clientes_General`, `Confirmación_reunión_general` y `Chatbot` leen/escriben en **Baserow** (base "David Incertis Web", id 175: tablas `Nuevos_clientes_Automatizaciones`, `Chats`, `FAQ_Data`) vía nodos HTTP Request con credencial `httpHeaderAuth` — el nodo nativo de Baserow no tiene su tipo de credencial registrado en esta instancia de n8n. Google Sheets queda solo como archivo histórico, sin escrituras nuevas.
+
+Este proyecto tiene los MCP `n8n-david-incertis` y `baserow` configurados en scope **local** (`claude mcp add -s local`, nunca `-s project`) para no filtrar tokens en `.mcp.json`. Si una sesión nueva no ve estas herramientas, hace falta reiniciarla tras el `claude mcp add`.
+
 ### Imágenes
 `Imagenes/Clientes/` — logos y capturas de casos de éxito de clientes, referenciados desde los modales de casos de éxito en `index.html`. `Imagenes/Toolkit/` — logos de herramientas (n8n, etc.) usados en secciones de servicios.
 
 ## Reglas de seguridad
 
 - **Nunca subas secretos** (API keys, tokens, webhooks privados, credenciales de Cloudflare/dondominio/GitHub) al repo, ni en HTML/JS ni en commits. Este es un sitio estático público: cualquier string en el código fuente es visible para cualquiera.
+- **Los MCP de n8n/Baserow van siempre en scope local** (`claude mcp add -s local`), nunca en `.mcp.json` del repo — llevan tokens API en la configuración de conexión.
 - **No añadas dependencias de terceros vía `<script src="...">` de CDNs no verificados.** Cada script externo nuevo (como el widget de n8n) es superficie de ataque en producción: revisa la fuente y fija versión explícita cuando sea posible.
 - **Los formularios y el webhook de contacto (`n8n.davidincertis.com`) no deben exponer lógica ni tokens sensibles en el cliente.** Todo dato sensible o validación con reglas de negocio va en el backend (n8n), nunca en `script.js`/`clinicas.js`/`inmobiliarias.js`.
 - **Sanitiza cualquier input de usuario antes de reflejarlo en el DOM** (evitar XSS) si se añade cualquier funcionalidad que muestre texto introducido por visitantes.

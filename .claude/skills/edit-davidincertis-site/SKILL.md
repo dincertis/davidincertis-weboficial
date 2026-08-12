@@ -15,7 +15,7 @@ Sitio estático sin build system: lo que hay en los `.html`/`.css`/`.js` es exac
 | Landing Clínicas | `clinicas.html` (+ `clinicas.js`, `styles/clinicas.css`) |
 | Landing Inmobiliarias | `inmobiliarias.html` (+ `inmobiliarias.js`, `styles/inmobiliarias.css`) |
 | Aviso legal | `legal.html` |
-| Listado del blog | `blog/index.html` (tarjetas manuales) |
+| Listado del blog | `blog/index.html` (autogenerado por n8n — ver sección 2, no lo edites a mano salvo arreglo puntual) |
 | Un post de blog concreto | `blog/YYYY-MM-DD-recXXXXXXXXXXXXXX.html` |
 | Estilos compartidos (colores, fuentes, layout general) | `styles/variables.css`, `styles/main.css`, `styles/sections.css`, `styles/responsive.css`, `styles/modal.css` — usados por varias páginas a la vez |
 | Widget de chat n8n | bloque `<script type="module">` con `createChat(...)` embebido en el HTML correspondiente + `styles/n8n-chat.css` |
@@ -25,8 +25,9 @@ Si el cambio toca un archivo de `styles/` o `script.js` compartido, revisa de re
 
 ## 2. Blog: reglas especiales
 
-- `blog/index.html` es una **lista de tarjetas mantenida a mano**, no se autogenera. Para publicar un post nuevo hay que añadir su tarjeta (imagen, fecha, título, enlace `https://davidincertis.com/blog/...`) manualmente, siguiendo el patrón de las tarjetas existentes.
-- Los archivos `blog/YYYY-MM-DD-recXXXXXXXXXXXXXX.html` (el sufijo `rec...` es un ID de registro de Airtable) vienen de un pipeline externo (Airtable + n8n). **No los renombres ni los borres sin confirmar explícitamente con el usuario** — están enlazados desde fuera (redes, SEO) y renombrarlos rompe esos enlaces.
+- `blog/index.html` **se autogenera y se commitea solo**, por el workflow n8n `Programación_Blog` (nodos "Acualiza índice de blog" + "Sube índice de blog"), cada vez que se publica un post nuevo. No lo edites a mano para "añadir la tarjeta de un post" — el próximo post publicado reescribe el archivo entero desde Airtable y perderías el cambio manual. Solo tócalo a mano para un arreglo puntual (p. ej. una ruta de imagen rota), y ten en cuenta que el siguiente post lo va a sobrescribir igualmente.
+- Los archivos `blog/YYYY-MM-DD-recXXXXXXXXXXXXXX.html` (el sufijo `rec...` es un ID de registro de Airtable) y sus imágenes en `blog/imagenes/` vienen del mismo pipeline (Airtable → IA → Replicate → GitHub, workflow `Programación_Blog` en `n8n.davidincertis.com`). **No los renombres ni los borres sin confirmar explícitamente con el usuario** — están enlazados desde fuera (redes, SEO) y renombrarlos rompe esos enlaces.
+- Las imágenes de portada se fuerzan a `.jpg` en el nodo Replicate del workflow (`output_format: "jpg"`), porque la plantilla de tarjeta en `blog/index.html` da por hecho esa extensión. Si alguna vez ves una portada rota en `blog/index.html` con la imagen sí visible dentro del post, sospecha primero de un desajuste de extensión (`.jpg` vs `.webp`/`.png`) entre lo que genera el modelo de imagen y lo que asume la plantilla del índice.
 
 ## 3. Cache-busting: no lo olvides
 
