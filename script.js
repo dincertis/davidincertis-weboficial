@@ -155,6 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const clientCasaCobo2 = document.getElementById('client-casacobo-2');
     if (clientCasaCobo2) setupModal('modal-casacobo', clientCasaCobo2);
 
+    const clientTrc = document.getElementById('client-trc');
+    if (clientTrc) setupModal('modal-trc', clientTrc);
+    const clientTrc2 = document.getElementById('client-trc-2');
+    if (clientTrc2) setupModal('modal-trc', clientTrc2);
+
     // Global Close on outside click
     // We attach ONE listener to window to handle ALL open modals
     window.addEventListener('click', (event) => {
