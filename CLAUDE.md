@@ -10,7 +10,7 @@ Actúa como un programador web senior. Este repositorio es el sitio web de produ
 
 Sitio estático **sin build system**: HTML, CSS y JS planos servidos tal cual. No hay `package.json`, ni bundler, ni framework, ni gestor de paquetes. No inventes comandos de build/lint/test que no existen — no los hay.
 
-- **Hosting**: Cloudflare (Pages), con despliegue automático al hacer push a `main` en GitHub.
+- **Hosting**: Cloudflare (Pages), con despliegue automático al hacer push a `main` en GitHub. ⚠️ Ese automatismo se puede romper sin avisar (el 25/09/2026 el proyecto de Pages se quedó desconectado de la cuenta de GitHub y estuvo 11 días sin desplegar, con los commits ya en `origin/main`). Si un cambio está commiteado pero no aparece en la web, el problema no es el repo: sigue el diagnóstico de la sección 5 del skill `n8n-baserow-automations`. Ojo, **Pages devuelve `200` con la landing entera para cualquier ruta que no exista en el deploy activo**, así que el código de estado no sirve para comprobar si un fichero está publicado.
 - **Dominio**: gestionado en dondominio, apuntando a Cloudflare.
 - **Repo**: `github.com/dincertis/davidincertis-weboficial` (rama principal `main`).
 
