@@ -204,8 +204,8 @@
 <p>Si tu flujo falla sin razón aparente, probablemente sea un problema de permisos. Usa <strong>Google Service Accounts</strong> en lugar de autenticación OAuth personal. Es más confiable para automatizaciones en producción.</p>
 <p>Solución: En n8n, cuando conectes Google Sheets, elige "Service Account" en lugar de "Google Credentials". Es un paso extra, pero te evita dolores de cabeza.</p>
 <p><strong>Error 2: Superar los límites de la API sin saberlo</strong></p>
-<p>Google Sheets tiene cuotas: máximo 500 solicitudes por minuto para usuarios autenticados. Si tu flujo intenta insertar 1.000 registros simultáneamente, fallará.</p>
-<p>Solución: Usa "Rate Limiting" en n8n. En la configuración del nodo, establece un máximo de 100 requests por minuto. Nada de golpes.</p>
+<p>La API de Google Sheets tiene <a href="https://developers.google.com/workspace/sheets/api/limits">cuotas por minuto</a>: por defecto, 300 lecturas y 300 escrituras por proyecto, y 60 de cada por usuario. Si tu flujo intenta insertar 1.000 registros fila a fila de golpe, recibirás errores 429 ("demasiadas solicitudes").</p>
+<p>Solución: agrupa los registros y escríbelos en bloque (el nodo de Google Sheets puede añadir muchas filas en una sola operación) o procésalos por lotes con el nodo "Loop Over Items" y una pausa con "Wait" entre lote y lote. Si aun así aparece un 429, activa "Retry On Fail" en el nodo para que reintente pasados unos segundos.</p>
 <p><strong>Error 3: No implementar manejo de errores</strong></p>
 <p>¿Qué pasa si una fila tiene datos incompletos? ¿Si el CRM no responde? Sin un error handler, el flujo se rompe y nunca sabes por qué.</p>
 <p>Solución: Añade un nodo "Error Workflow" en n8n. Si algo falla, envía un email al administrador con el detalle del error. Así no se pierde información y sabes qué reparar.</p>
