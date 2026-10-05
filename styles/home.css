@@ -1,0 +1,214 @@
+/* Home — secciones de posicionamiento (solo index.html) */
+.di-eyebrow {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.di-head {
+    max-width: 760px;
+    margin: 0 auto var(--spacing-lg);
+    text-align: center;
+}
+
+.di-head .section-title {
+    margin-bottom: 1rem;
+}
+
+.di-head p {
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+}
+
+/* Retos */
+.di-retos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.di-reto {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.75rem 0 2rem;
+}
+
+.di-num {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-accent-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.di-reto h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.di-reto p {
+    color: var(--color-text-dim);
+    margin: 0;
+}
+
+/* Servicios */
+.di-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.di-service {
+    background-color: var(--color-bg-darker);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--border-radius-md);
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.di-service:hover {
+    border-color: rgba(78, 205, 196, 0.5);
+}
+
+.di-service--featured {
+    border-color: var(--color-accent-secondary);
+}
+
+.di-tag {
+    align-self: flex-start;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    border: 1px solid rgba(78, 205, 196, 0.4);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 1.25rem;
+}
+
+.di-service--featured .di-tag {
+    background-color: var(--color-accent-secondary);
+    color: var(--color-bg-darker);
+}
+
+.di-service h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.di-service > p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.di-service ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem;
+    color: var(--color-text-dim);
+    font-size: 0.95rem;
+}
+
+.di-service li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.di-service li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 1px;
+    background-color: var(--color-accent-secondary);
+}
+
+.di-price {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.di-price small {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+    margin-top: 0.25rem;
+}
+
+/* Método */
+.di-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    counter-reset: step;
+}
+
+.di-step {
+    border-left: 2px solid var(--color-accent-secondary);
+    padding-left: 1.5rem;
+}
+
+.di-step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.di-step p {
+    color: var(--color-text-dim);
+    margin: 0;
+}
+
+/* Experiencia */
+.di-experience {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.di-experience p {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* CTA final */
+.di-cta p {
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .di-retos,
+    .di-services,
+    .di-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .di-steps {
+        gap: 2rem;
+    }
+
+    .di-service {
+        padding: 1.75rem;
+    }
+}

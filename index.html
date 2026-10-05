@@ -1,4 +1,3 @@
-David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,6 +18,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
     <link rel="stylesheet" href="styles/sections.css?v=1.1">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/home.css?v=1.0">
 </head>
 
 <body>
@@ -59,6 +59,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
                 <!-- Desktop Menu -->
                 <div class="desktop-menu" style="display: flex; align-items: center;">
                     <a href="#services" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">SERVICIOS</a>
+                    <a href="#metodo" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">CÓMO TRABAJO</a>
                     <a href="#clientes" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">CASOS DE ÉXITO</a>
                     <a href="blog/index.html" style="color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; font-family: var(--font-heading); margin-right: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent-primary)'" onmouseout="this.style.color='white'">BLOG</a>
                 </div>
@@ -70,6 +71,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
                     <button class="dropbtn" onclick="toggleMobileMenu(event)" style="font-size: 1rem; display: flex; align-items: center; gap: 5px;">MENÚ <span style="font-size: 0.7em;">▼</span></button>
                     <div id="mobileDropdown" class="dropdown-content" style="min-width: 200px; left: auto; right: 0; transform: none;">
                         <a href="#services">Servicios</a>
+                        <a href="#metodo">Cómo trabajo</a>
                         <a href="#clientes">Casos de Éxito</a>
                         <a href="blog/index.html">Blog</a>
                     </div>
@@ -89,7 +91,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
                 <div class="hero-content" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; max-width: 1200px; margin: 0 auto; text-align: left; flex-wrap: wrap-reverse;">
                     <div class="hero-text-col" style="flex: 1.5; min-width: 300px; max-width: 700px;">
                         <h1 class="hero-title" style="text-align: left;">Consultor Estratégico <br>de Inteligencia <br>Artificial.</h1>
-                        <p class="hero-subtitle" style="text-align: left; font-size: 1.3rem; color: var(--color-text-muted); margin-left: 0; max-width: 100%; margin-bottom: 2rem;">Te acompaño paso a paso en la transformación digital de tu empresa.</p>
+                        <p class="hero-subtitle" style="text-align: left; font-size: 1.3rem; color: var(--color-text-muted); margin-left: 0; max-width: 100%; margin-bottom: 2rem;">Ayudo a empresas y equipos a decidir dónde aporta valor la IA, a implantarla con criterio y a que su equipo la use cada día.</p>
                         <button class="btn btn-primary btn-large" style="font-weight: 700; font-size: 1.05rem; padding: 14px 32px; border-radius: var(--border-radius-sm); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="window.openModal ? window.openModal() : null;">Agendar reunión</button>
 
                     </div>
@@ -133,45 +135,118 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
             </div>
         </div>
 
-        <!-- Section E: Services -->
-        <section id="services" class="section-padding">
+        <!-- Retos -->
+        <section id="retos" class="section-padding">
             <div class="container">
-                <h3 class="section-title center-text">Mis servicios</h3>
-            </div>
-            <div class="container">
-                <div class="grid-3">
-                    <div class="card service-card" id="audit-card" style="cursor: pointer;">
-                        <h3>Auditoría y diseño de Integración de la IA</h3>
-                        <p class="service-tag">Diagnóstico de tu situación actual y estrategia para la mejora.</p>
-                        <p class="click-more">Haz click para saber más</p>
+                <div class="di-head">
+                    <span class="di-eyebrow">El punto de partida</span>
+                    <h2 class="section-title">Retos que resuelvo</h2>
+                    <p>La mayoría de empresas ya usan IA. Pocas lo hacen con un criterio común y resultados que se puedan medir.</p>
+                </div>
+                <div class="di-retos">
+                    <div class="di-reto">
+                        <span class="di-num">01</span>
+                        <h3>IA sin estrategia</h3>
+                        <p>Cada persona usa herramientas por su cuenta, sin criterio compartido ni forma de saber qué funciona.</p>
                     </div>
-                    <div class="card service-card" id="brain-card" style="cursor: pointer;">
-                        <h3>Automatización de tus procesos</h3>
-                        <p class="service-tag">Deja a la IA que trabaje por ti y dedica el tiempo a lo que de verdad necesitas.</p>
-                        <p class="click-more">Haz click para saber más</p>
+                    <div class="di-reto">
+                        <span class="di-num">02</span>
+                        <h3>Conocimiento disperso</h3>
+                        <p>La información clave vive en cabezas, correos y hojas de cálculo, y cuesta encontrarla cuando hace falta.</p>
                     </div>
-                    <div class="card service-card" id="consulting-card" style="cursor: pointer;">
-                        <h3>Agentes de Inteligencia Artificial</h3>
-                        <p class="service-tag">Ten uno o varios agentes trabajando para ti 24/7.</p>
-                        <p class="click-more">Haz click para saber más</p>
+                    <div class="di-reto">
+                        <span class="di-num">03</span>
+                        <h3>Procesos que no escalan</h3>
+                        <p>Crecer implica sumar horas de trabajo manual y repetitivo, con el riesgo de error que eso conlleva.</p>
+                    </div>
+                    <div class="di-reto">
+                        <span class="di-num">04</span>
+                        <h3>Dependencia de personas clave</h3>
+                        <p>Si alguien falta, la operativa se resiente porque el conocimiento no está documentado ni compartido.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="container" style="margin-top: 4rem;">
-                <h4 class="section-title center-text" style="font-size: 1.25rem; margin-bottom: 2rem; color: var(--color-text-dim);">Otros servicios</h4>
-                <div class="grid-3">
-                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;">
-                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; color: var(--color-accent-secondary);">Diseño de páginas web</h3>
-                        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin: 0;">Páginas web altamente personalizadas, prácticas y optimizadas para SEO.</p>
+        <!-- Servicios -->
+        <section id="services" class="section-padding alt-bg">
+            <div class="container">
+                <div class="di-head">
+                    <span class="di-eyebrow">Servicios</span>
+                    <h2 class="section-title">Cómo puedo ayudarte</h2>
+                    <p>Puedes empezar por un diagnóstico puntual o contar conmigo de forma continuada. La implantación llega cuando el plan la justifica.</p>
+                </div>
+                <div class="di-services">
+                    <article class="di-service">
+                        <span class="di-tag">Punto de partida</span>
+                        <h3>Diagnóstico y hoja de ruta de IA</h3>
+                        <p>Analizo cómo trabaja hoy tu empresa y dónde la IA aporta valor real. Sales con un plan priorizado, no con una lista de herramientas.</p>
+                        <ul>
+                            <li>Sesiones con dirección y equipo para mapear procesos.</li>
+                            <li>Detección de las tareas con más impacto y menos riesgo.</li>
+                            <li>Informe con hoja de ruta priorizada y estimación de ahorro.</li>
+                        </ul>
+                        <div class="di-price">Desde 490 €<small>Descontable si contratas la implantación.</small></div>
+                    </article>
+                    <article class="di-service di-service--featured">
+                        <span class="di-tag">Asesoría continua</span>
+                        <h3>Asesoría estratégica en IA</h3>
+                        <p>Acompaño a tu equipo mes a mes para que la IA forme parte del trabajo diario y no se quede en pruebas sueltas.</p>
+                        <ul>
+                            <li>Sesión mensual de trabajo con el equipo.</li>
+                            <li>Asistentes de IA diseñados para cada puesto, construidos con vosotros.</li>
+                            <li>Base de conocimiento compartida de la empresa, lista para usar con IA.</li>
+                        </ul>
+                        <div class="di-price">Desde 180 €/mes<small>+ IVA. Sin permanencia.</small></div>
+                    </article>
+                    <article class="di-service">
+                        <span class="di-tag">Proyecto</span>
+                        <h3>Implantación: automatizaciones y agentes</h3>
+                        <p>Cuando el plan lo justifica, construyo e integro las soluciones sobre las herramientas que ya usáis.</p>
+                        <ul>
+                            <li>Automatización de procesos e integraciones con CRM y ERP.</li>
+                            <li>Bases de datos operativas y paneles de control.</li>
+                            <li>Agentes y chatbots para web, WhatsApp o uso interno.</li>
+                        </ul>
+                        <div class="di-price">Presupuesto cerrado<small>Según el alcance definido en el diagnóstico.</small></div>
+                    </article>
+                    <article class="di-service">
+                        <span class="di-tag">Equipos</span>
+                        <h3>Formación in-company</h3>
+                        <p>Talleres prácticos para que tu equipo use la IA con soltura y seguridad, trabajando sobre casos reales de tu empresa.</p>
+                        <ul>
+                            <li>Uso eficaz de asistentes de IA en el día a día.</li>
+                            <li>Buenas prácticas de privacidad y tratamiento de datos.</li>
+                            <li>Ejercicios con vuestros propios documentos y procesos.</li>
+                        </ul>
+                        <div class="di-price">Desde 390 €<small>Por sesión.</small></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Método -->
+        <section id="metodo" class="section-padding">
+            <div class="container">
+                <div class="di-head">
+                    <span class="di-eyebrow">Método</span>
+                    <h2 class="section-title">Cómo trabajo</h2>
+                </div>
+                <div class="di-steps">
+                    <div class="di-step">
+                        <span class="di-num">01</span>
+                        <h3>Entender</h3>
+                        <p>Antes de hablar de herramientas, entiendo tu negocio, tus procesos y a tu equipo.</p>
                     </div>
-                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;">
-                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; color: var(--color-accent-secondary);">Desarrollo Frontend</h3>
-                        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin: 0;">Diseño interfaces responsivas, accesibles y rápidas para garantizar una experiencia de usuario fluida y atractiva.</p>
+                    <div class="di-step">
+                        <span class="di-num">02</span>
+                        <h3>Priorizar</h3>
+                        <p>Elegimos juntos lo que más impacto tiene con el menor riesgo, y definimos cómo medirlo.</p>
                     </div>
-                    <div class="card service-card" style="padding: 1.5rem; min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;">
-                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; color: var(--color-accent-secondary);">Diseño gráfico</h3>
-                        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin: 0;">Diseño de marca, imagen corporativa, logos y elementos atractivos para tu web o redes sociales.</p>
+                    <div class="di-step">
+                        <span class="di-num">03</span>
+                        <h3>Implantar y transferir</h3>
+                        <p>Lo ponemos en marcha y tu equipo aprende a usarlo y mantenerlo. El objetivo es que no dependas de mí.</p>
                     </div>
                 </div>
             </div>
@@ -180,7 +255,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
         <!-- Segment Clients -->
         <section id="clientes" class="section-padding" style="padding-top: 2rem; padding-bottom: 2rem; background-color: #f4f7f6; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
             <div class="container">
-                <h3 class="section-title center-text" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--color-bg-primary);">Clientes que ya se benefician de la IA</h3>
+                <h3 class="section-title center-text" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--color-bg-primary);">Empresas con las que he trabajado</h3>
                 <p class="center-text" style="font-size: 1rem; margin-bottom: 3rem; color: #4a5568;">Pincha sobre cada uno y consulta el caso de éxito</p>
                 <div class="clients-marquee-wrapper">
                     <div class="clients-marquee">
@@ -240,111 +315,27 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
             </div>
         </section>
 
-        <!-- Section B: Pain Points -->
-        <section id="pain-points" class="section-padding">
-            <div class="container">
-                <h2 class="section-title center-text">¿Te suena familiar?</h2>
-                <p class="center-text" style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">Si te identificas con alguna de estas situaciones, entonces puedo ayudarte.</p>
-                
-                <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto;">
-                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
-                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
-                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Buceas entre excels infinitos</strong> y nunca sabes en qué versión del documento estás.</p>
-                    </div>
-                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
-                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
-                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>No conoces el estado real de tu negocio</strong> porque te cuesta acceder a los datos clave cuando los necesitas.</p>
-                    </div>
-                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
-                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
-                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Pierdes horas copiando y pegando</strong> datos a mano, asumiendo un alto riesgo de cometer costosos errores.</p>
-                    </div>
-                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
-                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
-                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Se te escapan oportunidades con nuevos clientes</strong> por no contar con un sistema de captación ordenado y centralizado.</p>
-                    </div>
-                    <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; text-align: left; border-left: 4px solid var(--color-accent-secondary);">
-                        <span style="color: var(--color-accent-secondary); font-size: 1.5rem; line-height: 1;">•</span>
-                        <p style="margin: 0; font-size: 1.05rem; color: var(--color-text-main);"><strong>Toda la operativa depende de ti</strong> (o de una sola persona clave). Si esa persona falla, el flujo de trabajo se paraliza por completo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section C: Value Proposition -->
-        <section id="value-prop" class="section-padding">
-            <div class="container">
-                <h2 class="section-title center-text">No necesitas más personal, necesitas automatizar tus procesos y
-                    reducir horas de trabajo repetitivo.</h2>
-                
-                <div class="highlight-box" style="margin: 3rem auto 4rem auto; max-width: 800px; padding: 2.5rem; background-color: var(--color-bg-darker); border: 1px solid rgba(255,255,255,0.05); border-left: 4px solid var(--color-accent-secondary); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
-                    <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-text-main);">Pongo la Inteligencia Artificial a trabajar en tu negocio, para que tú trabajes menos.</p>
-                    <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem; line-height: 1.6;">Convierto el caos de tu día a día en un sistema ordenado. Automatizo la atención al cliente y el papeleo para que tú y tu equipo rindáis el doble sin estrés.</p>
-                    <ul style="text-align: left; font-size: 1.05rem; list-style-type: none; padding-left: 0; color: var(--color-text-dim); margin-bottom: 0;">
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;"><span style="color: var(--color-accent-secondary); margin-right: 10px; font-weight: bold;">✓</span><span><strong style="color: var(--color-text-main);">Cero leads perdidos:</strong> Captación automática a cualquier hora del día.</span></li>
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;"><span style="color: var(--color-accent-secondary); margin-right: 10px; font-weight: bold;">✓</span><span><strong style="color: var(--color-text-main);">Procesos ordenados:</strong> Tu Excel, tu CRM y tu correo por fin se entienden.</span></li>
-                        <li style="margin-bottom: 0; display: flex; align-items: flex-start;"><span style="color: var(--color-accent-secondary); margin-right: 10px; font-weight: bold;">✓</span><span><strong style="color: var(--color-text-main);">Implementación a tu medida:</strong> Soluciones llave en mano en menos de un mes.</span></li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </section>
-
-        <!-- Section D: Authority -->
+        <!-- Experiencia -->
         <section id="authority" class="section-padding alt-bg">
             <div class="container">
-                <div class="container">
-                    <div class="authority-grid" style="align-items: center; margin-bottom: 3rem; justify-content: center;">
-                        <div class="authority-text-col" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                            <h2 class="section-title">Experiencia en entornos de alta complejidad.</h2>
-                            <p class="authority-text">Ante todo hay que ser práctico: He implementado integraciones y
-                                automatizaciones para
-                                gestionar la producción de cientos de artículos al año y su importación desde China.
-                                Esta experiencia la puedo aplicar a tu empresa para mejorar tu eficiencia y
-                                productividad.</p>
-                        </div>
-                        </div>
-                    <div class="stats-grid" style="justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-                        <div class="stat-item">
-                            <span class="stat-number">+10</span>
-                            <span class="stat-label">horas/semana ahorradas</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">0%</span>
-                            <span class="stat-label">Errores financieros<br>y operativos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Gestión Remota</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">40%</span>
-                            <span class="stat-label">Ahorro en costos<br>promedio</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Soporte<br>disponible</span>
-                        </div>
-                    </div>
+                <div class="di-experience">
+                    <span class="di-eyebrow">Experiencia</span>
+                    <h2 class="section-title" style="margin-bottom: 1.5rem;">De la operación real a la IA</h2>
+                    <p>Antes de dedicarme a la consultoría de IA gestioné operaciones internacionales: la producción de cientos de artículos al año y su importación desde China. Esa experiencia me hace práctico: busco soluciones que funcionen en el día a día de una empresa, no demostraciones.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Section F: CTA Final -->
-        <section id="contact" class="footer-cta section-padding" style="padding-top: 2rem;">
+        <!-- CTA final -->
+        <section id="contact" class="footer-cta section-padding di-cta">
             <div class="container center-text">
-                <h2 class="section-title"
-                    style="font-size: 1.5rem; margin-bottom: 2rem; text-transform: uppercase;">¿HABLAMOS? AGENDA TU
-                    SESIÓN</h2>
-                <div>
-                    <a href="#auditoria" class="btn btn-primary btn-large"
-                        style="padding: 15px 30px; line-height: 1.5; font-size: 1.1rem; border: none; font-weight: 700; display: inline-block;">Agendar
-                        Ahora</a>
-                </div>
+                <h2 class="section-title" style="margin-bottom: 1rem;">¿Por dónde empezar con la IA en tu empresa?</h2>
+                <p>Cuéntame tu caso y te diré por dónde empezaría yo.</p>
+                <a href="#auditoria" class="btn btn-primary btn-large">Agendar reunión</a>
             </div>
         </section>
-    </main>
+
+            </main>
 
     <footer class="footer">
         <div class="container footer-content">
@@ -381,7 +372,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
     <div id="contact-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Solicitar Auditoría</h2>
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Agendar reunión</h2>
             <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Déjame tus datos y te contactaré en menos de
                 24h.</p>
 
@@ -467,83 +458,6 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
             }
         });
     </script>
-
-    <!-- Audit Details Modal -->
-    <div id="audit-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" data-target="audit-modal">&times;</span>
-            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Auditoría de Flujos de Trabajo &
-                Hoja de Ruta</h2>
-
-            <p style="margin-bottom: 1rem; font-weight: 600; color: var(--color-accent-secondary);">"Antes de tocar
-                nada, vamos a ver cuánto tiempo y recursos estás perdiendo por no automatizar tus procesos."</p>
-
-            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Se trata de una sesión intensiva donde
-                analizaré cómo trabajas hoy para detectar "agujeros negros" de tiempo y recursos, tanto humanos, como económicos.</p>
-
-            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Te entregaré un informe en PDF con el diagrama
-                de tus procesos actuales vs. cómo quedarían automatizados, y una estimación del ahorro anual.</p>
-
-            <p
-                style="margin-bottom: 1.5rem; font-style: italic; border-left: 3px solid var(--color-accent-primary); padding-left: 10px;">
-                Este diagnóstico es gratuito si contratas la implementación.</p>
-
-            <button class="btn btn-primary"
-                onclick="window.location.href='#auditoria'; document.getElementById('audit-modal').style.display='none'; openModal();">Solicitar
-                Ahora</button>
-        </div>
-    </div>
-
-    <!-- Business OS Modal -->
-    <div id="brain-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" data-target="brain-modal">&times;</span>
-            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Centralización y
-                Automatización de Procesos</h2>
-
-            <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--color-accent-secondary);">"Deja de ser
-                el secretario de tu propia empresa. Automatizo los procesos que trabajan por ti."</p>
-
-            <h4 style="margin-bottom: 1rem; color: var(--color-text-main);">¿Qué puede incluir?:</h4>
-            <ul
-                style="list-style-type: disc; padding-left: 20px; text-align: left; margin-bottom: 1.5rem; color: var(--color-text-dim);">
-                <li style="margin-bottom: 0.5rem;">Diseño de base de datos relacional (Clientes, Pedidos, Stock,
-                    Facturas) con automatizaciones internas y externas.</li>
-                <li style="margin-bottom: 0.5rem;">Automatizaciones clave: registro automático de clientes y leads, cribado de clientes según criterios, 
-                    envío automatizado de recordatorios, newsletters. promociones, seguimiento de satisfacción del cliente, 
-                    agendación de citas automáticas, gestión automática de no-shows y cancelaciones, etc.</li>
-                <li style="margin-bottom: 0.5rem;">Generación, registro y envío automático de informes, documentos, reportes, etc.</li>
-                <li style="margin-bottom: 0.5rem;">Escaneo automático de tu bandeja de entrada para registrar leads o asuntos importantes que se han podido traspapelar.
-                <li style="margin-bottom: 0.5rem;">Respuestas automáticas a e-mails o formularios con registro de los datos captados y notificación automática.</li>
-
-                </li>
-            </ul>
-
-            <button class="btn btn-primary"
-                onclick="window.location.href='#auditoria'; document.getElementById('brain-modal').style.display='none'; openModal();">Solicitar
-                Ahora</button>
-        </div>
-    </div>
-
-    <!-- Consulting Modal -->
-    <div id="consulting-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" data-target="consulting-modal">&times;</span>
-            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Agentes de IA dedicados a ti 24 horas al día durante todo el año</h2>
-
-            <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--color-accent-secondary);">Configuración e implementación de chatbots de atención 
-                al cliente, soporte técnico, etc., para tu página web o Whatsapp</p>
-
-            <p style="margin-bottom: 1rem; color: var(--color-text-dim);">Agentes "tutores" para resolver dudas o hacer de asistente técnico para el personal de 
-                tu empresa o equipo de trabajo</p>
-
-            <p style="margin-bottom: 1.5rem; color: var(--color-text-dim);">Agentes de venta "CRM" que, además de captar, clasificar y registrar leads automáticamente, también pueden gestionar ventas y lanzar campañas de marketing por segmentos.</p>
-
-            <button class="btn btn-primary"
-                onclick="window.location.href='#auditoria'; document.getElementById('consulting-modal').style.display='none'; openModal();">Solicitar
-                Ahora</button>
-        </div>
-    </div>
 
     <!-- TRC Modal -->
     <div id="modal-trc" class="modal">
@@ -657,7 +571,7 @@ David Incertis © 2025. Consultor Estratégico de Inteligencia Artificial
         </div>
     </div>
 
-    <script src="script.js?v=1.1"></script>
+    <script src="script.js?v=1.2"></script>
 
     <!-- Chatbot n8n -->
     <link href="styles/n8n-chat.css?v=1.3" rel="stylesheet" />

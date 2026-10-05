@@ -100,25 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (contactModal) contactModal.show();
     };
 
-    // Audit Modal
-    const auditCard = document.getElementById('audit-card');
-    setupModal('audit-modal', auditCard);
-
-    // Business OS Modal
-    const brainCard = document.getElementById('brain-card');
-    if (brainCard) {
-        console.log('Brain card found');
-        setupModal('brain-modal', brainCard);
-    } else {
-        console.error('Brain card NOT found');
-    }
-
-    // Consulting Modal
-    const consultingCard = document.getElementById('consulting-card');
-    if (consultingCard) {
-        setupModal('consulting-modal', consultingCard);
-    }
-
     // Client Modals
     const clientChou = document.getElementById('client-chou');
     if (clientChou) setupModal('modal-chou', clientChou);
