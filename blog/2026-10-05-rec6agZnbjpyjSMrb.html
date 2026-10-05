@@ -191,14 +191,14 @@
 <p>Cada una de estas acciones es un nodo simple en n8n.</p>
 <p><strong>PASO 6: Prueba y ajusta</strong></p>
 <p>Ejecuta el flujo manualmente primero. Ve que los datos lleguen correctamente a Google Sheets. Revisa los cálculos. Si todo está bien, programa la automatización: "Ejecutar cada lunes a las 7:00 AM" o "Ejecutar en tiempo real cuando hay cambios".</p>
-<h3 id="casosdeusorealesdondemsrentabilidadgeneran">Casos de Uso Reales (Donde Más Rentabilidad Generan)</h3>
-<p><strong>Caso 1: Reporting de E-commerce</strong></p>
-<p>Un cliente mío tiene tienda en Shopify. Cada mañana, n8n extrae órdenes del fin de semana, las categoriza, calcula totales de ventas por tipo de producto, y actualiza una hoja compartida con su contador y su gerente de almacén.</p>
-<p>Resultado: Reducción de 8 horas semanales de trabajo administrativo. El equipo ahora invierte ese tiempo en mejorar el servicio al cliente.</p>
-<p><strong>Caso 2: Seguimiento de Oportunidades de Ventas (CRM → Sheets)</strong></p>
-<p>Un gestor de ventas conectó su Pipedrive a n8n. Cada vez que una oportunidad cambia de estado (Lead → Proposal → Closed), n8n actualiza automáticamente un Google Sheet que alimenta un gráfico de proporciones. Su jefe ve en tiempo real cuánto pipeline hay y dónde está atancado.</p>
-<p><strong>Caso 3: Compilación de Métricas Multicanal</strong></p>
-<p>Combinar datos de Google Analytics, Instagram Insights, Google Ads y emisiones de email en una sola hoja. n8n lo hace en un solo flujo. Cada lunes, la agencia de marketing tiene un resumen unificado sin pedir nada a nadie.</p>
+<h3 id="ejemplosdeuso">Ejemplos de uso</h3>
+<p><strong>Ejemplo 1: Reporting de e-commerce</strong></p>
+<p>Imagina una tienda online en Shopify. Cada mañana, n8n extrae los pedidos del día anterior, los clasifica, calcula el total de ventas por tipo de producto y actualiza una hoja compartida con la gestoría y el responsable de almacén.</p>
+<p>El resultado: nadie tiene que montar ese informe a mano y el equipo puede dedicar ese tiempo a atender a sus clientes.</p>
+<p><strong>Ejemplo 2: Seguimiento de oportunidades de venta (CRM → Sheets)</strong></p>
+<p>Pongamos un equipo comercial que trabaja con Pipedrive. Cada vez que una oportunidad cambia de estado (lead → propuesta → cerrada), n8n actualiza automáticamente una hoja de Google Sheets que alimenta un gráfico de embudo. La dirección ve en tiempo real cuánto pipeline hay y dónde está atascado.</p>
+<p><strong>Ejemplo 3: Métricas de marketing en un solo lugar</strong></p>
+<p>Piensa en una agencia de marketing que tiene que combinar datos de Google Analytics, Instagram, Google Ads y sus campañas de email. Con un solo flujo de n8n, cada lunes tiene un resumen unificado en una hoja sin tener que pedir nada a nadie.</p>
 <h3 id="erroresquecasitodoelmundocometeycmoevitarlos">Errores Que Casi Todo El Mundo Comete (Y Cómo Evitarlos)</h3>
 <p><strong>Error 1: No gestionar bien los permisos de la API de Google Sheets</strong></p>
 <p>Si tu flujo falla sin razón aparente, probablemente sea un problema de permisos. Usa <strong>Google Service Accounts</strong> en lugar de autenticación OAuth personal. Es más confiable para automatizaciones en producción.</p>
