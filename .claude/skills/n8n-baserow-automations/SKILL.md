@@ -11,10 +11,10 @@ Este sitio depende de infraestructura externa (n8n, Baserow, Airtable, Replicate
 
 - **n8n**: servidor MCP `n8n-david-incertis`, herramientas `mcp__n8n-david-incertis__*` (`n8n_get_workflow`, `n8n_update_partial_workflow`, `n8n_validate_workflow`, `n8n_executions`, `n8n_manage_credentials`, `search_nodes`, `get_node`...).
 - **Baserow**: servidor MCP `baserow`, herramientas `mcp__baserow__*` (`list_databases`, `list_tables`, `get_table_schema`, `create_rows`, `update_rows`, `delete_rows`, `list_table_rows`). **Solo opera a nivel de fila** — no puede crear tablas ni campos. Si hace falta esquema nuevo, pide al usuario que lo cree en la UI de Baserow (dale el esquema exacto) — no intentes un token API "más permisos": los database tokens de Baserow son de solo-fila por diseño (confirmado: un token válido da 401 contra `/api/database/tables/...` aunque funcione perfecto contra `/api/database/rows/...`).
-- **Airtable**: el conector `claude.ai Airtable` **no tiene acceso a la base "Blogs"** (devuelve 422 `Could not find a table` tanto por ID como por nombre — está conectado a otra cuenta/scope). Para cambiar el `Estado` de un tema, pídeselo a David; no pierdas tiempo reintentando.
+- **Airtable**: el conector `claude.ai Airtable` **no tiene acceso a la base "Blogs"** (devuelve 422 `Could not find a table` tanto por ID como por nombre — está conectado a otra cuenta/scope). Patrón que sí funciona (05/10/2026): crear un workflow temporal en n8n (Webhook `responseMode: lastNode` → nodos Airtable con la credencial `Airtable Token David Incertis` `YkjKJy06g853UL6q`), activarlo, llamarlo con `n8n_test_workflow` pasando los datos en el body, y **borrarlo al terminar**. Así se leyó la cola y se cargaron los 15 temas nuevos.
 - Si estas herramientas no aparecen en tu lista al empezar la sesión, es que se configuraron en scope local (`claude mcp add -s local`, ver `CLAUDE.md`) y hace falta reiniciar la sesión de Claude Code para que se carguen — pídeselo al usuario, no intentes usar `curl` con tokens como sustituto salvo que él lo prefiera explícitamente.
 
-## 2. Mapa de infraestructura (verificado 2026-08-12)
+## 2. Mapa de infraestructura (verificado 2026-08-12, ampliado 2026-10-05)
 
 Los IDs pueden cambiar si se borran/recrean workflows o tablas — si algo de esto falla, vuelve a localizarlo por nombre con `n8n_list_workflows` / `list_tables` antes de asumir que el ID sigue siendo válido.
 
@@ -31,7 +31,8 @@ Los IDs pueden cambiar si se borran/recrean workflows o tablas — si algo de es
 | `Formulario_Clientes_General` | `PRBLboWepPrd6Sgx` | Recibe el formulario web (`index.html`), IA redacta email de seguimiento, escribe el lead en Baserow |
 | `Confirmación_reunión_general` | `W0o7VmQ8nQVYiLeE` | Webhook de Cal.com al agendar reunión: email recordatorio + upsert en Baserow (busca por email → PATCH si existe, POST si no) |
 | `Chatbot` | `dsTwKTls9r7RVcwh` | Widget de chat embebido; agente IA con `FAQ_Data` como tool, registra cada turno en `Chats` |
-| `Programación_Blog` | `ibiTlPLAYhNEAcUy` | Cron cada 10 días: genera y publica un post del blog completo (ver sección 4) |
+| `Programación_Blog` | `ibiTlPLAYhNEAcUy` | Cron cada 10 días: investiga, redacta y publica un post del blog completo (ver secciones 4 y 7) |
+| `Temáticas_Blog` | `q3WrcatP2IuZUcjr` | Genera 5 títulos SEO nuevos en la cola de Airtable (gpt-4o + SerpAPI). Programado cada 10 meses: en la práctica se lanza a mano cuando la cola se vacía |
 | `Alerta de errores` | `PH5bNTBXTzmjaCoG` | Error Trigger + email. Vincúlalo como `errorWorkflow` (operación `updateSettings`) en cualquier workflow crítico que edites si no lo está ya — es la única forma de que un fallo real le llegue a David sin que tenga que mirar n8n. |
 
 **Airtable** — base "Blogs" (`appknPKlYTH2Vzv8a`), tabla "Posts" (`tblKmolCAFshoFrH6`): cola de temas del blog. El campo `Estado` (`No creado` / `Creado`) controla qué tema recoge `Programación_Blog` en su próxima ejecución.
@@ -94,3 +95,25 @@ Ya se hizo para `Formulario_Clientes_General`, `Confirmación_reunión_general` 
 3. Migra los datos: lee el Google Sheet completo con el MCP de Google Drive (`read_file_content`), créalos en Baserow con `create_rows` en lotes de ~20-25 filas.
 4. Sustituye cada nodo Google Sheets por un HTTP Request contra la REST API de Baserow (`https://baserow.davidincertis.com/api/database/rows/table/{id}/?user_field_names=true`, ver sección 3 para la credencial). Baserow no tiene upsert nativo por campo no-ID: para eso hace falta un GET con `filter__<Campo>__equal=<valor>`, un nodo IF comprobando `$json.count > 0`, y luego PATCH (si hay coincidencia, usando `$json.results[0].id`) o POST (si no).
 5. Prueba de extremo a extremo con datos claramente marcados como prueba (usa el email/teléfono del propio usuario si hace falta un email real), y bórralos de Baserow al terminar.
+
+## 7. Contenido de los agentes (actualizado 2026-10-05)
+
+Desde el 05/10/2026 todo el contenido generado debe reflejar el posicionamiento de **consultor estratégico de IA** y los precios publicados en la web (diagnóstico desde 490 €, asesoría desde 180 €/mes + IVA sin permanencia, implantación con presupuesto cerrado, formación desde 390 €/sesión). Si cambian, hay que tocar **tres sitios**: `index.html`, los dos system prompts de `Chatbot` y las filas de `FAQ_Data`.
+
+**`Chatbot`**
+- `Chatbot FAQs` y `Chatbot Leads` tienen prompts nuevos con los 4 servicios y precios; el enlace de cierre es `[Agendar reunión](https://davidincertis.com/#auditoria)`. El de Leads usa "ejemplos de proyectos" sin cifras inventadas.
+- `FAQ_Data` (tabla 593): 26 filas tras añadir asesoría, diagnóstico, formación y "cerebro" de empresa.
+- Errores diarios "No prompt specified" en `Basic LLM Chain`: son llamadas con `chatInput` vacío (bots o carga del widget). Los chats reales funcionan; si molestan, añadir un IF que corte cuando `chatInput` esté vacío.
+- La prueba del chatbot con `n8n_test_workflow` escribe una fila en `Chats` y manda WhatsApp a David: borra la fila después.
+
+**CallMeBot**: los nodos de WhatsApp de `Chatbot`, `Formulario_Clientes_General` y `Programación_Blog` usan ya la credencial `Query Auth CallMeBot David Incertis` (`gWJPhdgueP53oISW`). Ninguno debe llevar `apikey=` en la URL.
+
+**`Programación_Blog`** (redacción):
+- `INVESTIGA` es ahora un **AI Agent** (antes una cadena sin herramientas que se inventaba la "investigación") con la herramienta `Buscar en Google`: un `httpRequestTool` contra `https://serpapi.com/search.json` (credencial predefinida `serpApi`, `gl=es`, `hl=es`, `num=8`, `optimizeResponse` sobre `organic_results` → `title,link,snippet,date`), con `retryOnFail` y `onError: continueRegularOutput`. El nodo nativo `toolSerpApi` devolvía fragmentos sin URL: no lo vuelvas a usar para esto. SerpAPI da 503 ocasionales tras ~90 s: el reintento lo cubre.
+- `INVESTIGA` y `REDACTA` usan `Claude Sonnet (redacción)` = `claude-sonnet-4-5-20250929`. ⚠️ `claude-sonnet-5-5` falla con el nodo `lmChatAnthropic` de esta versión de n8n (400 por `thinking: disabled`). `PROMPT IMAGEN` sigue con Haiku 4.5 (`Anthropic Chat Model`).
+- `REDACTA`: persona consultor estratégico de IA; 900–1.200 palabras (máx. 1.300); abre con respuesta directa; sección "Preguntas frecuentes"; reglas de veracidad (solo cifras del informe con enlace, nada de "un cliente / una empresa con la que trabajé" salvo que salga de la hoja `Desarrollos`, nada de multas o plazos normativos sin fuente).
+- El nodo `Markdown` limpia antes de convertir: quita preámbulos tipo "Perfecto, ya tengo todo…", un `---` inicial y el primer encabezado H1/H2 (el título ya lo pone la plantilla).
+- `Edit Fields` y `Acualiza índice de blog` escriben "Consultor Estratégico de Inteligencia Artificial" en cabecera y pie; el índice se titula "Blog de IA y automatización".
+- Probado en seco el 05/10 con un workflow temporal (ya borrado) sobre el tema del AI Act: fuentes reales con URL, sin cifras inventadas. Aun así **el investigador puede heredar errores de sus fuentes** (confundió el art. 50 del AI Act): revisa los posts de normativa.
+
+**Cola de Airtable** (05/10/2026): 15 temas `No creado` centrados en adopción de IA, Claude/ChatGPT/Gemini, skills, MCP, base de conocimiento, AI Act, RGPD, precios y ROI. `Temáticas_Blog` tiene prompt nuevo con el posicionamiento y prohíbe títulos genéricos de "tendencias".

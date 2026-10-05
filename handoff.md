@@ -1,6 +1,6 @@
 # Handoff — Migración a Baserow + depuración de Programación_Blog (n8n + web)
 
-Fecha: 2026-08-12 · Actualizado: 2026-09-26 (sección 8)
+Fecha: 2026-08-12 · Actualizado: 2026-10-05 (sección 9)
 
 ## Resumen
 
@@ -155,3 +155,34 @@ La rama `true` sigue al nodo `HTTP Request` de siempre. El workflow pasó de 36 
 5. `Detener - Post no desplegado` (stopAndError) detrás de `Avisa fallo despliegue`, para que la ejecución salga en rojo en n8n en vez de en verde. `settings.errorWorkflow` de `Programación_Blog` ya apuntaba a `Alerta de errores` (`PH5bNTBXTzmjaCoG`), así que además llega el email. Total: 33 nodos funcionales + sticky notes, validado con 0 errores y 0 avisos.
 
 **`CLAUDE.md`**: la línea de Hosting decía solo "despliegue automático al hacer push a `main`" — justo la suposición que falló. Ahora advierte de que ese automatismo puede romperse en silencio, remite a la sección 5 del skill, y avisa del `200` con landing de fallback.
+
+## 9. Sesión 2026-10-05 — Reposicionamiento a consultor estratégico de IA
+
+**Web (`index.html`, commit `fa9c817`)**
+- Nueva estructura: Hero → logos → Retos que resuelvo → Servicios (4 tarjetas con precio) → Cómo trabajo → Clientes → Experiencia → CTA.
+- Precios aprobados por David: diagnóstico desde 490 € (descontable si contrata implantación), asesoría estratégica desde 180 €/mes + IVA sin permanencia (modelo Dryfing), implantación con presupuesto cerrado, formación in-company desde 390 €/sesión.
+- Eliminados: "¿Te suena familiar?", "No necesitas más personal…", "Otros servicios" (web/frontend/diseño), las cifras no demostrables (0% errores, 40% ahorro, 24/7) y los 3 modales de servicios (y su JS). Corregido texto suelto antes del `<!DOCTYPE>`.
+- Estilos nuevos en `styles/home.css` (solo los carga `index.html`); `script.js?v=1.2`.
+
+**n8n / Baserow** (detalle en la sección 7 del skill `n8n-baserow-automations`)
+- `Chatbot`: prompts nuevos con servicios y precios; `FAQ_Data` reescrita (11 filas) y ampliada (+4).
+- `Formulario_Clientes_General`: firma "Consultor Estratégico de IA" (prompt y código), hecho por David.
+- CallMeBot: clave fuera de las URLs en `Chatbot` y `Formulario_Clientes_General`; ahora usan la credencial Query Auth (hecho por David).
+- `Programación_Blog`: investigación con búsqueda real (SerpAPI vía `httpRequestTool`), Sonnet 4.5, prompt de redacción nuevo con reglas de veracidad, limpieza de preámbulos, plantilla con el nuevo subtítulo.
+- `Temáticas_Blog`: prompt nuevo. Cola de Airtable sustituida por 15 temas nuevos.
+- n8n-mcp local actualizado a 2.91.0.
+
+**Blog (repo)**
+- Post `2026-10-05-rec6agZnbjpyjSMrb` (reporting con Sheets + n8n) corregido: preámbulo de la IA, título duplicado, dato sin fuente, casos inventados → "Ejemplos de uso", errata "atascado", cuotas reales de la API de Google Sheets, anécdotas suavizadas.
+- Cabecera y pie de los 15 posts e índice → "Consultor Estratégico de Inteligencia Artificial".
+
+**Incidencias de la sesión**
+- El push desde el Mac falla en sesiones remotas (sin credenciales de GitHub); los pushes se hicieron desde la nube con la app de Claude ya instalada en GitHub.
+- Una sesión remota cortada dejó `.git/index.lock` y `ORIG_HEAD.lock` huérfanos en el repo local: se arregla con `find .git -name "*.lock" -delete`.
+
+**Pendiente / vigilar**
+- Leer el primer post generado con el sistema nuevo (~15/10/2026) antes de difundirlo, sobre todo si trata normativa.
+- Los posts anteriores al 05/10 pueden tener cifras o casos inventados; revisar los más visitados.
+- Errores "No prompt specified" en `Chatbot` por llamadas vacías (inofensivos).
+- `Temáticas_Blog` programado cada 10 meses: lanzarlo cuando la cola de 15 temas se acabe (~5 meses).
+
